@@ -15,10 +15,15 @@ client.user.setActivity("Pokemon Go")
     })    
 });
 
-var helloResponses = [`Sokallom.`, `Tagság megvonás 1 hétig!`, `Többet ne forduljon elő!`];
-var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
+
 
 client.on('message', msg => {
+  var helloResponses = [
+	"Sokallom.",
+	"Tagság megvonás 1 hétig!", 
+	"Többet ne forduljon elő!"
+];
+var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
   if (msg.attachments.size > 0 ) {
     msg.reply(response);
     
