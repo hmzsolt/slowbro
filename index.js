@@ -21,11 +21,13 @@ client.on('message', msg => {
   var helloResponses = [
 	"Sokallom.",
 	"Tagság megvonás 1 hétig!", 
-	"Többet ne forduljon elő!"
+	"Többet ne forduljon elő!",
+	"Posztolás gyakorlásától való eltiltás az idők végezetéig.",
+	"Jogosulatlan előnyszerzés miatt transferelned kell."
 ];
 var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
   if (msg.attachments.size > 0 ) {
-    msg.reply(response);
+    msg.reply(response).then().catch(console.error);
     
   }
 });
