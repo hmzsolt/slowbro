@@ -15,7 +15,7 @@ client.user.setActivity("Pokemon Go")
     })    
 });
 
-const helloResponses = ['Sokallom.', 'Tagság megvonás 1 hétig!', 'Többet ne forduljon elő!'];
+var helloResponses = ['Sokallom.', 'Tagság megvonás 1 hétig!', 'Többet ne forduljon elő!'];
 var response = helloResponses [Math.floor(Math.random()*helloResponses.length)];
 
 client.on('message', msg => {
