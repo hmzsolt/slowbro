@@ -26,7 +26,7 @@ client.on('message', msg => {
 	"Jogosulatlan előnyszerzés miatt transferelned kell."
 ];
 var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
-  if (msg.attachments.size > 0) {
+  if (msg.attachments.size > 0 && channel.id === 504535266069970945) {
     msg.reply(response).then().catch(console.error);
     
   }
