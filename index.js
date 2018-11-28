@@ -17,7 +17,7 @@ client.user.setActivity("Pokemon Go")
 
 
 
-client.on('message', msg, client => {
+client.on('message', msg => {
   var helloResponses = [
 	"Sokallom.",
 	"Tagság megvonás 1 hétig!", 
