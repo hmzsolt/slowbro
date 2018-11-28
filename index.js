@@ -24,7 +24,8 @@ client.on('message', msg => {
 	"Többet ne forduljon elő!",
 	"Posztolás gyakorlásától való eltiltás az idők végezetéig.",
 	"Jogosulatlan előnyszerzés miatt transferelned kell.",
-	"Ugye ezt nem gondoltad komolyan?!"  
+	"Ugye ezt nem gondoltad komolyan?!",
+	"Ezt most megtarthatod..." 
 ];
 var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
   if (msg.attachments.size > 0 && msg.channel.id === '504535266069970945') {
