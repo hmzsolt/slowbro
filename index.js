@@ -12,8 +12,8 @@ client.user.setActivity("Pokemon Go")
         guild.channels.forEach((channel) => {
             console.log(` -- ${channel.name} - (${channel.type}) - ${channel.id}`)
         })
-    })    
-});*/
+    })  */  
+});
 
 
 
