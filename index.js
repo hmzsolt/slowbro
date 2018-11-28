@@ -5,14 +5,14 @@ client.on('ready', () => {
 client.user.setActivity("Pokemon Go")
   console.log(`Logged in as ${client.user.tag}!`);
 
-  console.log("Servers:");
+ /* console.log("Servers:");
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
 
         guild.channels.forEach((channel) => {
             console.log(` -- ${channel.name} - (${channel.type}) - ${channel.id}`)
         })
-    })    
+    })   */ 
 });
 
 
@@ -38,7 +38,7 @@ const prefix = "!";
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
-  if (message.content.startsWith(prefix + "red" && message.channel.id === '504535266069970945')) {
+  if (message.content.startsWith(prefix + "red" && message.channel.id === '458620540555493376')) {
     message.delete(1);
     message.channel.send("Figyelem Trainerek! @everyone @here");
   } 
