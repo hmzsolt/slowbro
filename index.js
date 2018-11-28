@@ -34,4 +34,14 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
   }
 });
 
+const prefix = "!";
+client.on("message", (message) => {
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
+ 
+  if (message.content.startsWith(prefix + "red")) {
+    message.delete(1000);
+    message.channel.send("Figyelem Trainerek! @everyone");
+  } 
+});
+
 client.login(process.env.token);
