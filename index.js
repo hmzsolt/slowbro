@@ -38,9 +38,9 @@ const prefix = "!";
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
-  if (message.content.startsWith(prefix + "red")) {
+  if (message.content.startsWith(prefix + "red" && message.channel.id === '504535266069970945')) {
     message.delete(1);
-    message.channel.send("Figyelem Trainerek! @everyone");
+    message.channel.send("Figyelem Trainerek! @everyone @here");
   } 
 });
 
