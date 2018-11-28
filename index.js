@@ -40,7 +40,7 @@ client.on("message", (message) => {
  
   if (message.content.startsWith(prefix + "red" && message.channel.id === '458620540555493376')) {
     message.delete(1);
-    message.channel.send(`Figyelem Trainerek! @everyone @here` ++ `${message.content}`);
+    message.channel.send("Figyelem Trainerek! @everyone @here" + message.content);
   } 
 });
 
