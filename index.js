@@ -5,14 +5,14 @@ client.on('ready', () => {
 client.user.setActivity("Pokemon Go")
   console.log(`Logged in as ${client.user.tag}!`);
 
-  /*console.log("Servers:");
+  console.log("Servers:");
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
 
         guild.channels.forEach((channel) => {
             console.log(` -- ${channel.name} - (${channel.type}) - ${channel.id}`)
         })
-    })  */  
+    })    
 });
 
 
