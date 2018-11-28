@@ -40,7 +40,7 @@ client.on("message", (message) => {
  
   if (message.content.startsWith(prefix + "red")) {
     message.delete(1);
-    message.channel.send("Figyelem Trainerek! @everyone @here");
+    message.channel.send("Figyelem Trainerek! @everyone @here" + message.content);
   } 
 });
 
