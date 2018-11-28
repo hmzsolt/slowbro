@@ -27,7 +27,7 @@ client.on('message', msg => {
 ];
 var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
   if (msg.attachments.size > 0 ) {
-    client.channels.get('504535266069970945').msg.reply(response).then().catch(console.error);
+    msg.reply(response).then().catch(console.error);
     
   }
 });
