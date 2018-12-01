@@ -44,7 +44,7 @@ client.on("message", (message) => {
     message.channel.send(message.content.slice(5));
   } 
 	
-  if (msg.attachments.size > 0 && msg.channel.id === '458620540555493376')   {
+  if (message.attachments.size > 0 && message.channel.id === '458620540555493376')   {
     message.delete(1);
     message.channel.send("Kérlek, szöveges formátumban jelentsd. Pl.: !red GYM neve - idő - szint");
   }	
