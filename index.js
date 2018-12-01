@@ -36,7 +36,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
 	  
   if (msg.attachments.size > 0 && msg.channel.id === '458620540555493376')   {
     msg.delete(1);
-    msg.channel.send("Kérlek, szöveges formátumban jelentsd. Pl.: !red GYM neve - idő - szint");
+    msg.reply("Kérlek, szöveges formátumban jelentsd. Pl.: !red GYM neve - idő - szint");
   }	
 	  
   
