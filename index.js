@@ -25,6 +25,7 @@ client.on('message', msg => {
 	"Posztolás gyakorlásától való eltiltás az idők végezetéig.",
 	"Jogosulatlan előnyszerzés miatt transferelned kell.",
 	"Ugye ezt nem gondoltad komolyan?!",
+	"2 perced van felhúzni lvl 40-ig, vagy transferelned kell!",
 	"Ezt most megtarthatod..." 
 ];
 var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
