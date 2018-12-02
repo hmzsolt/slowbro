@@ -52,8 +52,8 @@ client.on("message", (message) => {
     message.delete();
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5));
-	let emoji = message.guild.emojis.find('name',"thumbsup");
-	message.react(emoji);     
+	
+	message.react('👍');     
     } 
 	
 	
