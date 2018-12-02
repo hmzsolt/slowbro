@@ -51,6 +51,9 @@ client.on("message", (message) => {
     message.delete();
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5));
+	  message.react('👍')
+	  .then(console.log)
+	  .catch(console.error);
    
     } 
 		
