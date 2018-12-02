@@ -41,11 +41,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
     msg.reply("Kérlek, szöveges formátumban jelentsd a raidet. Pl.: !red GYM neve - reccsenés időpontja - tier");
   }
 	
-  if (msg.author.id === '516960731258814466' && msg.channel.id === '458620540555493376')   {
-    msg.react('👍');
-    msg.react('👎');  
-  }	  
-  
+	    
 });
 
 const prefix = "!";
