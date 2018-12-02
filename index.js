@@ -4,6 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
 client.user.setActivity("Pokemon Go")
   console.log(`Logged in as ${client.user.tag}!`);
+	console.log(`${client.user.id}`);
 
  /* console.log("Servers:");
     client.guilds.forEach((guild) => {
@@ -51,12 +52,9 @@ client.on("message", (message) => {
     message.delete();
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5));
-	  message.react('👍')
-	  .then(console.log)
-	  .catch(console.error);
-   
+	     
     } 
-		
+
 });
 
 client.login(process.env.token);
