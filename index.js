@@ -53,11 +53,6 @@ client.on("message", (message) => {
     message.channel.send(message.content.slice(5));
    
     } 
-	
- if (message.author.bot) {
- message.react("\:thumbsup:");
- message.react("\:thumbsdown:");	 
- }
 		
 });
 
