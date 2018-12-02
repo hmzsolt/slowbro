@@ -51,26 +51,12 @@ client.on("message", (message) => {
   if (message.content.startsWith(prefix + "red")) {
     message.delete(1);
     message.channel.send(" Trainerek figyelem! @everyone @here ");
-    message.channel.send(message.content.slice(5));
+    message.channel.send(message.content.slice(5)).then().message.react('👎');
       
     } 
 	
 	
 });
 
-client.on('message', (receivedMessage) => {
-    if (receivedMessage.author == '516960731258814466'  && receivedMessage.channel.id === '458620540555493376') { 
-        
-
-    receivedMessage.react("👍")
-    receivedMessage.react("👎")
-
-    receivedMessage.guild.emojis.forEach(customEmoji => {
-        console.log(`Reacting with custom emoji: ${customEmoji.name} (${customEmoji.id})`)
-        receivedMessage.react(customEmoji)
-    
-    })
-    }
-});
 
 client.login(process.env.token);
