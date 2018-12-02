@@ -53,7 +53,8 @@ client.on("message", (message) => {
     message.channel.send(message.content.slice(5)).then(function (message) {
               message.react("👍")
               message.react("👎")
-            }).catch(function()
+              
+            }).catch(function() {
               //Something
              });
 	  
