@@ -51,10 +51,13 @@ client.on("message", (message) => {
   if (message.content.startsWith(prefix + "red")) {
     message.delete(1);
     message.channel.send(" Trainerek figyelem! @everyone @here ");
-    message.channel.send(message.content.slice(5)).then(function (message){
+    message.channel.send(message.content.slice(5)).then(function (message) {
               message.react("👍")
               message.react("👎")
-            }).catch(function();
+
+            }).catch(function() {
+              //Something
+             });
       
     } 
 	
