@@ -37,7 +37,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
   }  
 	  
   if (msg.attachments.size > 0 && msg.channel.id === '458620540555493376')   {
-    msg.delete();
+    msg.delete(1);
     msg.reply("Kérlek, szöveges formátumban jelentsd a raidet. Pl.: !red GYM neve - reccsenés időpontja - tier");
   }
 	
@@ -49,10 +49,10 @@ client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
   if (message.content.startsWith(prefix + "red")) {
-    message.delete();
+    message.delete(1);
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5));
-    message.react(':thumbsup:').then(console.log).catch(console.error);
+    message.react('\:thumbsup:').then(console.log).catch(console.error);
     
   
     } 
