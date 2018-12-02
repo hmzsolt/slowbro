@@ -51,8 +51,7 @@ client.on("message", (message) => {
     message.delete(1);
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5));
-    message.react(client.emojis.get(":white_check_mark:"));  
-  } 
+    } 
 		
 });
 
