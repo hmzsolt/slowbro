@@ -54,6 +54,8 @@ client.on("message", (message) => {
               message.react("👍")
               message.react("👎")
             }).catch(function();
+              //Something
+             });
 	  
     } 
 		
