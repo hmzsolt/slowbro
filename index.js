@@ -70,7 +70,7 @@ client.on('message', (receivedMessage) => {
         receivedMessage.react(customEmoji)
     
     })
-
+    }
 });
 
 client.login(process.env.token);
