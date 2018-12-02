@@ -51,8 +51,8 @@ client.on("message", (message) => {
     message.delete(1);
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5));
-	  Message.react(":white_check_mark: ");
-	  Message.react(":negative_squared_cross_mark: ");
+	  message.react(":white_check_mark: ");
+	  message.react(":negative_squared_cross_mark: ");
     } 
 		
 });
