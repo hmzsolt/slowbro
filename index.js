@@ -73,7 +73,7 @@ client.on("messageReactionAdd", (messageReaction, message) => {
 	  let redcountbot = messageReaction.count;
 	  const redcount = redcountbot-1;
 console.log("Az aktuális Raid-re jelentkezők száma : ", redcount );
-	  message.channel.send(`Az aktuális Raid-re jelentkezők száma : ${redcount}`);
+	  //message.channel.send(`Az aktuális Raid-re jelentkezők száma : ${redcount}`);
 	    
   }
 });
