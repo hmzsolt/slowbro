@@ -58,7 +58,7 @@ client.on("message", (message) => {
             }).catch(function() {
               //Something
              });
-    message.channel.send("Az aktuális raidre jelentkezők száma : ");  
+    message.channel.send(`Az aktuális Raid-re jelentkezők száma : ${redcount}`);  
     } 
 	
 	
@@ -72,7 +72,7 @@ client.on("messageReactionAdd", (messageReaction, user, message) => {
 
 	  let redcountbot = messageReaction.count;
 	  var redcount = redcountbot-1;
-console.log("Az aktuális raidre jelentkezők száma : ", redcount );
+console.log("Az aktuális Raid-re jelentkezők száma : ", redcount );
   
   }
 });
