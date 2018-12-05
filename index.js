@@ -71,7 +71,7 @@ client.on("messageReactionAdd", (messageReaction, user, message) => {
   if(messageReaction.emoji.name === "👍") {
 
 console.log(messageReaction.count);
-	client.channels.get(458620540555493376).send('A Redre jelentkezők száma: ');  
+  
   }
 });
 
