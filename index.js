@@ -71,7 +71,7 @@ client.on("messageReactionAdd", (messageReaction, user, message) => {
   if(messageReaction.emoji.name === "👍") {
 
 	  let redcount = messageReaction.count;
-console.log("Az aktuális raidre jelentkezők száma : " );
+console.log("Az aktuális raidre jelentkezők száma : ", redcount );
   
   }
 });
