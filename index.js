@@ -71,7 +71,7 @@ client.on("messageReactionAdd", (messageReaction, user, message) => {
   if(messageReaction.emoji.name === "👍") {
 
 console.log(messageReaction.count);
-	  return message.send(messageReaction.count);
+	  
   }
 });
 
