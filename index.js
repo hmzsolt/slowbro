@@ -52,8 +52,9 @@ client.on("message", (message) => {
     message.delete(1);
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5)).then(function (message) {
-              message.react("👍")
-              message.react("👎")
+              message.react("👍");
+              message.react("👎");
+	      console.log(message.reactions.find(reaction => reaction.emoji.name === '👍').count);
 
             }).catch(function() {
               //Something
