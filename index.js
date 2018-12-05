@@ -70,7 +70,7 @@ client.on("message", (message) => {
 client.on("messageReactionAdd", (messageReaction, user, message) => {
   if(messageReaction.emoji.name === "👍") {
 
-console.log(messageReaction.count));
+console.log(messageReaction.count);
   }
 });
 
