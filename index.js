@@ -65,6 +65,7 @@ client.on("message", (message) => {
 });
 
 client.on("messageReactionAdd", (messageReaction, user) => console.log(messageReaction.count));
+message.channel.send("Az aktuális raidre jelentkezők száma : " messageReaction.count);
 
 
 client.login(process.env.token);
