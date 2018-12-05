@@ -64,8 +64,15 @@ client.on("message", (message) => {
 	
 });
 
-client.on("messageReactionAdd", (messageReaction, user) => console.log(messageReaction.count));
-message.channel.send(`Az aktuális raidre jelentkezők száma :  ${messageReaction.count}`);
+//client.on("messageReactionAdd", (messageReaction, user, message) => console.log(messageReaction.count));
+//message.channel.send(`Az aktuális raidre jelentkezők száma :  ${messageReaction.count}`);
+
+client.on("messageReactionAdd", (messageReaction, user, message) => {
+  if(messageReaction.emoji.name === "👍") {
+
+console.log(messageReaction.count));
+  }
+});
 
 
 client.login(process.env.token);
