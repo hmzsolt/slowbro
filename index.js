@@ -64,10 +64,8 @@ client.on("message", (message) => {
 	
 });
 
-client.on('messageReactionAdd', (reaction, user) => {
-    if(reaction.emoji.name === "👍") {
-        console.log(reaction.users);
-    }
+client.on('message', async message => {
+	console.log(message.reactions.find(reaction => reaction.emoji.name === '👍').count);
 });
 
 
