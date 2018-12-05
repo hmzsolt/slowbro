@@ -64,7 +64,7 @@ client.on("message", (message) => {
 	
 });
 
-client.on("messageReactionAdd", (messageReaction) => console.log(messageReaction.user));
+client.on("messageReactionAdd", (messageReaction, user) => console.log(messageReaction.user));
 
 
 client.login(process.env.token);
