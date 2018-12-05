@@ -79,7 +79,7 @@ console.log("Az aktuális Raid-re jelentkezők száma : ", redcount );
   }
 });
 
-client.on('message', function(message) {
+/*client.on('message', function(message) {
     if (message.content == "^clear") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.fetchMessages()
@@ -89,7 +89,7 @@ client.on('message', function(message) {
         }
     }
 
-});
+});*/
 
 
 
