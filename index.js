@@ -71,13 +71,13 @@ client.on("message", (message) => {
 client.on("messageReactionAdd", (messageReaction, message) => {
   if(messageReaction.emoji.name === "👍") {
 
-	  //let redcountbot = messageReaction.count;
-	 //const redcount = redcountbot-1;
-	  function raidcount() {
-  let redcountbot = messageReaction.count; 
-		  let redcount = redcountbot-1;
-}
-console.log("Az aktuális Raid-re jelentkezők száma : ",  ); return raidcount();
+	  let redcountbot = messageReaction.count;
+	 const redcount = redcountbot-1;
+	 // function raidcount() {
+ // let redcountbot = messageReaction.count; 
+		 // let redcount = redcountbot-1;
+//}
+console.log("Az aktuális Raid-re jelentkezők száma : ", redcount ); 
 	  //message.channel.send(`Az aktuális Raid-re jelentkezők száma : ${redcount}`);
 	    
   }
