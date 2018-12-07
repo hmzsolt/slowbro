@@ -70,7 +70,7 @@ client.on('messageReactionAdd', (reaction) => {
     if(reaction.emoji.name === jelentkezem) {
 	  var  jelentkezok = reaction.count-1;
 	    
-	    if (jelentkezok > 1) return console.log(jelentkezok).catch(console.error);
+	    console.log(jelentkezok).catch(console.error);
 	    
     }
 });
