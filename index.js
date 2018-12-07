@@ -60,7 +60,7 @@ client.on("message", (message) => {
               //Something
              });
         } 
-	console.log(`Az aktuális Raid-re jelentkezők száma : ", ${message.react.get(jelentkezem).count-1} `);	
+	console.log(`Az aktuális Raid-re jelentkezők száma : ", ${message.react(jelentkezem).count-1} `);	
 	
 });
 
