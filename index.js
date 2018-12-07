@@ -68,7 +68,8 @@ client.on("message", (message) => {
 
 client.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === jelentkezem) {
-        console.log(reaction.count);
+	  var  jelentkezok = reaction.count-1
+        console.log(jelentkezok);
     }
 });
 
