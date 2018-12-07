@@ -68,7 +68,7 @@ client.on("message", (message) => {
 //client.on("messageReactionAdd", (messageReaction, user, message) => console.log(messageReaction.count));
 //message.channel.send(`Az aktuális raidre jelentkezők száma :  ${messageReaction.count}`);
 
-client.on("messageReactionAdd", (messageReaction, message) => {
+client.on("messageReactionAdd", (messageReaction, message, user) => {
   if(messageReaction.emoji.name === "👍") {
 
 	  let redcountbot = messageReaction.count;
@@ -78,7 +78,7 @@ client.on("messageReactionAdd", (messageReaction, message) => {
 		 // let redcount = redcountbot-1;
 //}
 console.log("Az aktuális Raid-re jelentkezők száma : ", redcount ); 
-	  console.log(ClientUser.username);
+	  console.log(messageReaction.users);
 	  //message.channel.send(`Az aktuális Raid-re jelentkezők száma : ${redcount}`);
 	    
   }
