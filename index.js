@@ -71,7 +71,7 @@ client.on("message", (message) => {
 
 
 client.on("messageReactionAdd", (messageReaction, message, user) => {
-  if(messageReaction.emoji.name === "jelentkezem") {
+  if(messageReaction.emoji.name === jelentkezem) {
 
 	  let redcountbot = messageReaction.count;
 	 const redcount = redcountbot-1;
