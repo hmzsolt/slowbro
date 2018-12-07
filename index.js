@@ -56,7 +56,7 @@ client.on("message", (message) => {
               message.react(jelentkezem);
               message.react(nemjelentkezem);
 
-		console.log(`Az aktuális Raid-re jelentkezők száma :  `);
+		console.log(`Az aktuális Raid-re jelentkezők száma :  ${jelentkezok} `);
 	    
             }).catch(function() {
               //Something
