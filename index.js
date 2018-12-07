@@ -70,7 +70,7 @@ client.on("message", (message) => {
 //message.channel.send(`Az aktuális raidre jelentkezők száma :  ${messageReaction.count}`);
 
 
-client.on('message', (messageReaction, message, user) => {
+client.on('messageReaction', (messageReaction, message, user) => {
   if(messageReaction.emoji.name === jelentkezem) {
 
 	  let redcountbot = messageReaction.count;
