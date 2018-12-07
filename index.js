@@ -43,7 +43,8 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
 	
 	    
 });
-
+const jelentkezem = "👍";
+const nemjelentkezem = "👎";
 const prefix = "!";
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -53,8 +54,8 @@ client.on("message", (message) => {
     message.delete(1);
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5)).then(function (message) {
-              message.react("👍");
-              message.react("👎");
+              message.react(jelentkezem);
+              message.react(nemjelentkezem);
 	      
             }).catch(function() {
               //Something
@@ -68,8 +69,9 @@ client.on("message", (message) => {
 //client.on("messageReactionAdd", (messageReaction, user, message) => console.log(messageReaction.count));
 //message.channel.send(`Az aktuális raidre jelentkezők száma :  ${messageReaction.count}`);
 
+
 client.on("messageReactionAdd", (messageReaction, message, user) => {
-  if(messageReaction.emoji.name === "👍") {
+  if(messageReaction.emoji.name === "jelentkezem") {
 
 	  let redcountbot = messageReaction.count;
 	 const redcount = redcountbot-1;
