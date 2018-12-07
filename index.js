@@ -78,7 +78,7 @@ client.on("messageReactionAdd", (messageReaction, message) => {
 		 // let redcount = redcountbot-1;
 //}
 console.log("Az aktuális Raid-re jelentkezők száma : ", redcount ); 
-	  console.log(messageReaction.users);
+	  console.log(reaction.users);
 	  //message.channel.send(`Az aktuális Raid-re jelentkezők száma : ${redcount}`);
 	    
   }
