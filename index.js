@@ -55,12 +55,12 @@ client.on("message", (message) => {
     message.channel.send(message.content.slice(5)).then(function (message) {
               message.react(jelentkezem);
               message.react(nemjelentkezem);
-	      
+		console.log(`Az aktuális Raid-re jelentkezők száma : ", ${message.react(jelentkezem).count-1} `);	      
             }).catch(function() {
               //Something
              });
         } 
-	console.log(`Az aktuális Raid-re jelentkezők száma : ", ${message.react(jelentkezem).count-1} `);	
+	//console.log(`Az aktuális Raid-re jelentkezők száma : ", ${message.react(jelentkezem).count-1} `);	
 	
 });
 
