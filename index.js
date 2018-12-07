@@ -50,7 +50,6 @@ client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
   if (message.content.startsWith(prefix + "red")) {
-	  console.log(message.author.user);
     message.delete(1);
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5)).then(function (message) {
@@ -60,29 +59,17 @@ client.on("message", (message) => {
             }).catch(function() {
               //Something
              });
-    //message.channel.send(`Az aktuális Raid-re jelentkezők száma : ${redcount}`);  
-    } 
+        } 
 	
 	
 });
 
-//client.on("messageReactionAdd", (messageReaction, user, message) => console.log(messageReaction.count));
-//message.channel.send(`Az aktuális raidre jelentkezők száma :  ${messageReaction.count}`);
 
-
-client.on('messageReaction', (messageReaction, message, user) => {
-  if(messageReaction.emoji.name === "👍") {
-
-	  let redcountbot = messageReaction.count;
-	 const redcount = redcountbot-1;
-	 // function raidcount() {
- // let redcountbot = messageReaction.count; 
-		 // let redcount = redcountbot-1;
-//}
-console.log("Az aktuális Raid-re jelentkezők száma : ", redcount ); 
-	  //console.log(messageReaction.fetchUsers());
-	  //message.channel.send(`Az aktuális Raid-re jelentkezők száma : ${redcount}`);
-	    
+client.on('messageReaction', (messageReaction) => {
+  if(messageReaction.emoji.name === jelentkezem) {
+	 	 
+console.log("Az aktuális Raid-re jelentkezők száma : ", messageReaction.count-1 ); 
+	  	    
   }
 });
 
