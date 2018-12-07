@@ -66,6 +66,11 @@ client.on("message", (message) => {
 	
 });
 
+client.on('messageReactionAdd', (reaction, user) => {
+    if(reaction.emoji.name === jelentkezem) {
+        console.log(reaction.users);
+    }
+});
 
 /*client.on('message', function(message) {
     if (message.content == "^clear") {
