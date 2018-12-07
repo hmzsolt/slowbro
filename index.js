@@ -60,18 +60,10 @@ client.on("message", (message) => {
               //Something
              });
         } 
-	
+	console.log(`Az aktuális Raid-re jelentkezők száma : ", ${reaction.get(jelentkezem).count-1} `);	
 	
 });
 
-
-client.on('messageReaction', (messageReaction) => {
-  if(messageReaction.emoji.name === jelentkezem) {
-	 	 
-console.log("Az aktuális Raid-re jelentkezők száma : ", messageReaction.count-1 ); 
-	  	    
-  }
-});
 
 /*client.on('message', function(message) {
     if (message.content == "^clear") {
