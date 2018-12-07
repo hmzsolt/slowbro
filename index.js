@@ -55,9 +55,9 @@ client.on("message", (message) => {
     message.channel.send(message.content.slice(5)).then(function (message) {
               message.react(jelentkezem);
               message.react(nemjelentkezem);
-	    const raidjelentkezem = message.react(jelentkezem).count-1;
-	    console.log(raidjelentkezem);
-		console.log(`Az aktuális Raid-re jelentkezők száma :  `);	      
+	    const reactions = await message.awaitReactions(reaction => reaction.emoji.name === jelentkezem, {time: 15000}));
+//message.channel.send(`${reactions.get(jelentkezem).count-1}`);
+		console.log(`Az aktuális Raid-re jelentkezők száma :  ${reactions.get(jelentkezem).count-1}`);	      
             }).catch(function() {
               //Something
              });
