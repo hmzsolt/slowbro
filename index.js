@@ -66,10 +66,10 @@ client.on("message", (message) => {
 	
 });
 var  jelentkezok = 0;
-client.on('messageReactionAdd', (reaction, message) => {
+client.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === jelentkezem) {
 	  var  jelentkezok = reaction.count-1;
-	
+	user.send('Ayy lmao!11!!');
 	console.log("Az aktuális Raid-re jelentkezők száma : ");
 	console.log(jelentkezok);   
 	  
