@@ -62,10 +62,12 @@ client.on("message", (message, reaction) => {
               //Something
              });
         } 
+	if(reaction.emoji.name === jelentkezem) {
+	  var  jelentkezok = reaction.count-1;}
 	//console.log(`Az aktuális Raid-re jelentkezők száma : ", ${message.react(jelentkezem).count-1} `);	
 	
 });
-var  jelentkezok = 0;
+/*var  jelentkezok = 0;
 client.on('messageReactionAdd', (reaction, message) => {
     if(reaction.emoji.name === jelentkezem) {
 	  var  jelentkezok = reaction.count-1;
@@ -76,7 +78,7 @@ client.on('messageReactionAdd', (reaction, message) => {
 	console.log("Az aktuális Raid-re jelentkezők száma : ");
 	console.log(jelentkezok);
 	//message.channel.send("Az aktuális Raid-re jelentkezők száma :", `${jelentkezok}`);
-});
+});*/
 
 /*client.on('message', function(message) {
     if (message.content == "^clear") {
