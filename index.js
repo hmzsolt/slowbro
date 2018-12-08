@@ -72,6 +72,7 @@ client.on('messageReactionAdd', (reaction, user, message) => {
 	//user.send("Az aktuális Raid-re jelentkezők száma : ");
 	//user.send(jelentkezok);
 	
+	console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
 	console.log("Az aktuális Raid-re jelentkezők száma : ");
 	console.log(jelentkezok);   
 	  
