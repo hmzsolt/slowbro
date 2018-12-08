@@ -53,8 +53,8 @@ client.on("message", (message) => {
     message.delete(1);
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5)).then(function (message) {
-              await message.react(jelentkezem);
-              await message.react(nemjelentkezem);
+               message.react(jelentkezem);
+               message.react(nemjelentkezem);
 		console.log(message.reactions.find(reaction => reaction.emoji.name === jelentkezem).count);
 		//console.log("Az aktuális Raid-re jelentkezők száma : ");
 	    
