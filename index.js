@@ -46,7 +46,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
 const jelentkezem = "👍";
 const nemjelentkezem = "👎";
 const prefix = "!";
-client.on("message", (message) => {
+client.on("message", (message, reaction) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
   if (message.content.startsWith(prefix + "red")) {
