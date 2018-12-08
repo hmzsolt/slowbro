@@ -69,7 +69,7 @@ var  jelentkezok = 0;
 client.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === jelentkezem) {
 	  var  jelentkezok = reaction.count-1;
-	user.send("Az aktuális Raid-re jelentkezők száma : ", `${jelentkezok}`);
+	//user.send("Az aktuális Raid-re jelentkezők száma : ", `${jelentkezok}`);
 	console.log("Az aktuális Raid-re jelentkezők száma : ");
 	console.log(jelentkezok);   
 	  
