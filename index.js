@@ -53,8 +53,8 @@ client.on("message", (message) => {
     message.delete(1);
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5)).then(function (message) {
-              message.react(jelentkezem);
-              message.react(nemjelentkezem);
+              await message.react(jelentkezem);
+              await message.react(nemjelentkezem);
 		console.log(message.reactions.find(reaction => reaction.emoji.name === jelentkezem).count);
 		//console.log("Az aktuális Raid-re jelentkezők száma : ");
 	    
@@ -72,8 +72,9 @@ client.on('messageReactionAdd', (reaction, user, message) => {
 	//user.send("Az aktuális Raid-re jelentkezők száma : ");
 	//user.send(jelentkezok);
 	
-	console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
-	console.log("Az aktuális Raid-re jelentkezők száma : ", jelentkezok);
+	//console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
+	//console.log("Az aktuális Raid-re jelentkezők száma : ", jelentkezok);
+	    
 	//console.log(jelentkezok);
 	  
     }	
