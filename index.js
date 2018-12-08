@@ -55,7 +55,7 @@ client.on("message", (message) => {
     message.channel.send(message.content.slice(5)).then(function (message) {
                message.react(jelentkezem);
                message.react(nemjelentkezem);
-		console.log(message.reactions.find(reaction => reaction.emoji.name === jelentkezem).count);
+		console.log(message.reactions.find(jelentkezem).count);
 		//console.log("Az aktuális Raid-re jelentkezők száma : ");
 	    
             }).catch(function() {
