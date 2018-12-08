@@ -71,7 +71,7 @@ client.on('messageReactionAdd', (reaction, user, message) => {
 	  var  jelentkezok = reaction.count-1;
 	//user.send("Az aktuális Raid-re jelentkezők száma : ");
 	//user.send(jelentkezok);
-	message.reply(`Az aktuális Raid-re jelentkezők száma : `);
+	
 	console.log("Az aktuális Raid-re jelentkezők száma : ");
 	console.log(jelentkezok);   
 	  
