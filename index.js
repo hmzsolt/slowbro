@@ -54,7 +54,7 @@ client.on("message", (message) => {
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5)).then(function (message) {
               message.react(jelentkezem).then(() => {
-	      console.log("Reacted to message")};
+	      console.log("Reacted to message")});
               message.react(nemjelentkezem);
 
 		//console.log("Az aktuális Raid-re jelentkezők száma : ");
