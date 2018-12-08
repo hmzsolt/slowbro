@@ -76,8 +76,10 @@ client.on('messageReactionAdd', (reaction, user, message) => {
 	console.log(jelentkezok);   
 	  
     }	
-
-	//message.channel.send("Az aktuális Raid-re jelentkezők száma :", `${jelentkezok}`);
+	function(message) {
+	message.channel.send("Az aktuális Raid-re jelentkezők száma :", `${jelentkezok}`);
+	}
+	
 });
 
 /*client.on('message', function(message) {
