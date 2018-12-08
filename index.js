@@ -46,7 +46,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
 const jelentkezem = "👍";
 const nemjelentkezem = "👎";
 const prefix = "!";
-client.on("message", (message, reaction) => {
+client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
   if (message.content.startsWith(prefix + "red")) {
@@ -62,23 +62,21 @@ client.on("message", (message, reaction) => {
               //Something
              });
         } 
-	if(reaction.emoji.name === jelentkezem) {
-	  var  jelentkezok = reaction.count-1;}
 	//console.log(`Az aktuális Raid-re jelentkezők száma : ", ${message.react(jelentkezem).count-1} `);	
 	
 });
-/*var  jelentkezok = 0;
+var  jelentkezok = 0;
 client.on('messageReactionAdd', (reaction, message) => {
     if(reaction.emoji.name === jelentkezem) {
 	  var  jelentkezok = reaction.count-1;
-	    
-	    
-	    
-    }	
+	
 	console.log("Az aktuális Raid-re jelentkezők száma : ");
-	console.log(jelentkezok);
+	console.log(jelentkezok);   
+	  
+    }	
+
 	//message.channel.send("Az aktuális Raid-re jelentkezők száma :", `${jelentkezok}`);
-});*/
+});
 
 /*client.on('message', function(message) {
     if (message.content == "^clear") {
