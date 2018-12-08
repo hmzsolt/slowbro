@@ -66,7 +66,7 @@ client.on("message", (message) => {
 	
 });
 var  jelentkezok = 0;
-client.on('messageReactionAdd', (reaction, user, message) => {
+client.on('messageReactionAdd', (reaction, user, function(message)) => {
     if(reaction.emoji.name === jelentkezem) {
 	  var  jelentkezok = reaction.count-1;
 	//user.send("Az aktuális Raid-re jelentkezők száma : ");
@@ -76,9 +76,9 @@ client.on('messageReactionAdd', (reaction, user, message) => {
 	console.log(jelentkezok);   
 	  
     }	
-	function(message) {
-	message.channel.send("Az aktuális Raid-re jelentkezők száma :", `${jelentkezok}`);
-	}
+	
+	//message.channel.send("Az aktuális Raid-re jelentkezők száma :", `${jelentkezok}`);
+	
 	
 });
 
