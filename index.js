@@ -53,7 +53,7 @@ client.on("message", (message) => {
     message.delete(1);
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5)).then(function (message) {
-               message.react(jelentkezem).then(() => message.react(nemjelentkezem));
+    message.react(jelentkezem).then(() => message.react(nemjelentkezem));
     message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`) ;          
 	    //message.react(nemjelentkezem);
 	    
@@ -61,7 +61,7 @@ client.on("message", (message) => {
               //Something
              });
         } 
-	//console.log(`Az aktuális Raid-re jelentkezők száma : ", ${message.react(jelentkezem).count-1} `);	
+	//console.log(``);	
 	
 });
 var  jelentkezok = 0;
@@ -71,17 +71,15 @@ client.on('messageReactionAdd', (reaction, user, message) => {
 	//user.send("Az aktuális Raid-re jelentkezők száma : ");
 	//user.send(jelentkezok);
 	
-	//console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
-	//console.log("Az aktuális Raid-re jelentkezők száma : ", jelentkezok);
+	console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
+	console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
 	    
-	//console.log(jelentkezok);
-	  
+	message.reply(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);    
+	//console.log(jelentkezok);  
     }	
-	
-	//message.channel.send("Az aktuális Raid-re jelentkezők száma :", `${jelentkezok}`);
-	
-	
+	//message.channel.send("Az aktuális Raid-re jelentkezők száma :", `${jelentkezok}`);	
 });
+
 
 /*client.on('message', function(message) {
     if (message.content == "^clear") {
