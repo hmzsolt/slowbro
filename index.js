@@ -84,7 +84,7 @@ client.on('messageReactionRemove', (reaction, user, message) => {
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	  var  jelentkezok = reaction.count-1;
 		
-	console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
+	console.log(`${user.username} dereacted with "${reaction.emoji.name}".`);
 	console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
 	    
 	return user.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);    
