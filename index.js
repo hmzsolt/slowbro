@@ -54,7 +54,7 @@ client.on("message", (message) => {
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5)).then(function (message) {
     message.react(jelentkezem).then(() => message.react(nemjelentkezem));
-    message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`) ;          
+    //message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`) ;          
 	    //message.react(nemjelentkezem);
 	    
             }).catch(function() {
@@ -66,8 +66,8 @@ client.on("message", (message) => {
 });
 var  jelentkezok = 0;
 client.on('messageReactionAdd', (reaction, user, message) => {
-    if(reaction.emoji.name === jelentkezem) {
-	  var  jelentkezok = reaction.count-1;
+    if(reaction.emoji.name === jelentkezem && user.username != Slowbro ) {
+	  var  jelentkezok = reaction.count;
 	//user.send("Az aktuális Raid-re jelentkezők száma : ");
 	//user.send(jelentkezok);
 	
