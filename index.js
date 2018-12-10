@@ -5,20 +5,20 @@ client.on('ready', () => {
 client.user.setActivity("Pokemon Go")
   console.log(`Logged in as ${client.user.tag} on ${client.guilds.size} server(s)!`);
 	console.log(`ID: ${client.user.id}`);
-	
-	let valor = message.guild.roles.find(role => role.name === "valor");
-	let mystic = message.guild.roles.find(role => role.name === "mystic");
-	let instinct = message.guild.roles.find(role => role.name === "instinct");
-	console.log(valor,mystic,instinct);
 
- /* console.log("Servers:");
+
+  console.log("Servers:");
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
 
+	guild.roles.foreEach((role) => {
+		consoloe.log(` -- ${role.name} - ${role.id}`)
+	
         guild.channels.forEach((channel) => {
             console.log(` -- ${channel.name} - (${channel.type}) - ${channel.id}`)
-        })
-    })   */ 
+		})        
+	})
+    })    
 });
 
 
@@ -117,7 +117,5 @@ client.on('messageReactionRemove', (reaction, user, message) => {
     }
 
 });*/
-
-
 
 client.login(process.env.token);
