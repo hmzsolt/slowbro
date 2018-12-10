@@ -80,7 +80,7 @@ client.on('messageReactionAdd', (reaction, user, message) => {
     }	
 	if(reaction.emoji.name != jelentkezem) {
 	  
-	return reaction.remove(user); 	
+	return reaction.remove(user); 	}
 });
 
 client.on('messageReactionRemove', (reaction, user, message) => {
