@@ -3,8 +3,8 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
 client.user.setActivity("Pokemon Go")
-  console.log(`Logged in as ${client.user.tag} on ${client.guilds.size} servers!`);
-	console.log(`${client.user.id}`);
+  console.log(`Logged in as ${client.user.tag} on ${client.guilds.size} server(s)!`);
+	console.log(`ID: ${client.user.id}`);
 
  /* console.log("Servers:");
     client.guilds.forEach((guild) => {
