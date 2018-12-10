@@ -5,14 +5,14 @@ exports.run = async (client, message, args) => {
 
     await message.delete().catch(O_o=>{});
 
-    const a = message.guild.roles.get('485987998794514442'); // Valor
-    const b = message.guild.roles.get('485987998165499914'); // Mystic
-    const c = message.guild.roles.get('482192667766423561'); // Instinct
+    const a = message.guild.roles.get('458317524581351426'); // valor 
+    const b = message.guild.roles.get('458610003482509322'); // mystic 
+    const c = message.guild.roles.get('458611006508105728'); // instinct 
 
     const filter = (reaction, user) => ['🇦', '🇧', '🇨'].includes(reaction.emoji.name) && user.id === message.author.id;
 
     const embed = new RichEmbed()
-        .setTitle('Avaiilable Roles')
+        .setTitle('Available Roles')
         .setDescription(`
         
         🇦 ${a.toString()}
