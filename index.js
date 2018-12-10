@@ -46,7 +46,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
 const jelentkezem = "👍";
 const nemjelentkezem = "👎";
 const prefix = "!";
-client.on("message", (message) => {
+/*client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
   if (message.content.startsWith(prefix + "red")) {
@@ -62,7 +62,25 @@ client.on("message", (message) => {
         } 
 	//console.log(``);	
 	
+});*/
+
+client.on('message', async message => {
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
+ 
+  if (message.content.startsWith(prefix + "red")) {
+    	message.delete(1);
+    	await message.channel.send(" Trainerek figyelem! @everyone @here ");
+    	await message.channel.send(message.content.slice(5));
+    	await message.react(jelentkezem);
+	await message.react(nemjelentkezem);
+    console.log(message.reactions.find(reaction => reaction.emoji.name === jelentkezem).count);
+	    
+        
+        } 
+		
+	
 });
+
 /*var  jelentkezok = 0;
 client.on('messageReactionAdd', (reaction, user, message) => {
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
