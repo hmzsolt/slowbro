@@ -78,7 +78,7 @@ client.on('messageReactionAdd', (reaction, user, message) => {
 	//console.log(jelentkezok);  
 	    
     }	
-	if(reaction.emoji.name != jelentkezem) {
+	if(reaction.emoji.name != jelentkezem || nemjelentkezem) {
 	  
 	return reaction.remove(user); 	}
 });
