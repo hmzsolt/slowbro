@@ -55,8 +55,7 @@ client.on("message", (message) => {
     message.channel.send(message.content.slice(5)).then(function (message) {
     message.react(jelentkezem).then(() => message.react(nemjelentkezem));
     
-	    
-	    
+	       
             }).catch(function() {
               //Something
              });
