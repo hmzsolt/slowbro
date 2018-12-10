@@ -6,7 +6,6 @@ client.user.setActivity("Pokemon Go")
   console.log(`Logged in as ${client.user.tag} on ${client.guilds.size} server(s)!`);
 	console.log(`ID: ${client.user.id}`);
 
-
 /*  console.log("Servers:");
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
@@ -20,8 +19,6 @@ client.user.setActivity("Pokemon Go")
 	})
     }) */   
 });
-
-
 
 client.on('message', msg => {
   var helloResponses = [
@@ -102,9 +99,6 @@ client.on('messageReactionRemove', (reaction, user, message) => {
     }	
 		
 });*/
-
-
-
 
 /*client.on('message', function(message) {
     if (message.content == "^clear") {
