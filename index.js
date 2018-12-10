@@ -46,14 +46,15 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
 const jelentkezem = "👍";
 const nemjelentkezem = "👎";
 const prefix = "!";
-client.on("message", (message) => {
+client.on('message', (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
   if (message.content.startsWith(prefix + "red")) {
     message.delete(1);
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5)).then(function (message) {
-    message.react(jelentkezem).then(() => message.react(nemjelentkezem));
+    message.react(jelentkezem);
+	message.react(nemjelentkezem);
     
 	       
             }).catch(function() {
