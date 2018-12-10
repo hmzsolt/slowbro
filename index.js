@@ -50,7 +50,7 @@ client.on('message', (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
   if (message.content.startsWith(prefix + "red")) {
-    message.delete(1);
+    message.delete(1).catch();
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5)).then(function (message) {
     message.react(jelentkezem);
