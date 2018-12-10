@@ -64,7 +64,7 @@ client.on("message", (message) => {
 	//console.log(``);	
 	
 });
-var  jelentkezok = 0;
+/*var  jelentkezok = 0;
 client.on('messageReactionAdd', (reaction, user, message) => {
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	  var  jelentkezok = reaction.count-1;
@@ -94,7 +94,7 @@ client.on('messageReactionRemove', (reaction, user, message) => {
 	  
     }	
 		
-});
+});*/
 
 
 
