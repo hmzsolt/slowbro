@@ -5,9 +5,9 @@ client.on('ready', () => {
 client.user.setActivity("Pokemon Go")
   console.log(`Logged in as ${client.user.tag} on ${client.guilds.size} server(s)!`);
 	console.log(`ID: ${client.user.id}`);
-	console.log(server.roles.get("name", "valor"));
-	console.log(server.roles.get("name", "mystic"));
-	console.log(server.roles.get("name", "instinct"));
+	console.log(message.guild.roles.get("name", "valor"));
+	console.log(message.guild.roles.get("name", "mystic"));
+	console.log(message.guild.roles.get("name", "instinct"));
 
  /* console.log("Servers:");
     client.guilds.forEach((guild) => {
