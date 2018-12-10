@@ -60,12 +60,7 @@ client.on("message", (message) => {
             }).catch(function() {
               //Something
              });
-	 
-	if(reaction.emoji.name != jelentkezem && reaction.emoji.name != nemjelentkezem ) {
-	  
-	return reaction.remove(user); 	}  
-	  
-        } 
+
 	//console.log(``);	
 	
 });
