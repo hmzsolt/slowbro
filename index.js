@@ -59,7 +59,7 @@ client.on("message", (message) => {
             }).catch(function() {
               //Something
              });
-
+  }
 	//console.log(``);	
 	
 });
