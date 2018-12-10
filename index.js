@@ -54,11 +54,17 @@ client.on("message", (message) => {
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5)).then(function (message) {
     message.react(jelentkezem).then(() => message.react(nemjelentkezem));
-    console.log(message.reactions.find(reaction => reaction.emoji.name === jelentkezem).count);
+    
+	    
 	    
             }).catch(function() {
               //Something
              });
+	 
+	if(reaction.emoji.name != jelentkezem && reaction.emoji.name != nemjelentkezem ) {
+	  
+	return reaction.remove(user); 	}  
+	  
         } 
 	//console.log(``);	
 	
