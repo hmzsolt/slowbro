@@ -94,6 +94,15 @@ client.on('messageReactionRemove', (reaction, user, message) => {
 		
 });
 
+client.on('messageReactionRemove', (reaction, user, message) => {
+    if(reaction.emoji.name != jelentkezem) {
+	  
+	 return reaction.remove(user);   
+	    
+	  
+    }	
+		
+});
 
 
 /*client.on('message', function(message) {
