@@ -1,7 +1,6 @@
-const { RichEmbed } = require('discord.js');
-const { prefix } = require('../config');
+const Discord = require("discord.js");
 
-exports.run = async (client, message, args) => {
+module.exports.run = async (bot, message, args) => {
 
     await message.delete().catch(O_o=>{});
 
