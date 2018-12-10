@@ -11,12 +11,12 @@ client.user.setActivity("Pokemon Go")
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
 					
-	client.guild.forEach((role) => {
+	guild.roles.forEach((role) => {
 		console.log(` -- ${role.name} - ${role.id}`)
 					
-        guild.channels.forEach((channel) => {
+        /*guild.channels.forEach((channel) => {
             console.log(` --- ${channel.name} - (${channel.type}) - ${channel.id}`)
-		})        
+		})   */     
 	})
     })    
 });
