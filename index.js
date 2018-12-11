@@ -68,7 +68,7 @@ client.on('message', (message) => {
 });
 
 
-/*var  jelentkezok = 0;
+var  jelentkezok = 0;
 client.on('messageReactionAdd', (reaction, user, message) => {
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	  var  jelentkezok = reaction.count-1;
@@ -78,7 +78,7 @@ client.on('messageReactionAdd', (reaction, user, message) => {
 	console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
 	console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
 	    
-	//return user.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);    
+	return console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);    
 	//console.log(jelentkezok);  
 	    
     }	
@@ -98,7 +98,7 @@ client.on('messageReactionRemove', (reaction, user, message) => {
 	  
     }	
 		
-});*/
+});
 
 /*client.on('message', function(message) {
     if (message.content == "^clear") {
