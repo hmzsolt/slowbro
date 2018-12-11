@@ -93,6 +93,7 @@ client.on('messageReactionRemove', (reaction, user, message) => {
 		
 	console.log(`${user.username} dereacted with "${reaction.emoji.name}".`);
 	console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
+	
 	    
 	//return user.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);    
 	  
