@@ -82,9 +82,9 @@ client.on('messageReactionAdd', (reaction, user, message) => {
 	//console.log(jelentkezok);  
 	    
     }	
-	if(reaction.emoji.name != jelentkezem && reaction.emoji.name != nemjelentkezem ) {
+	/*if(reaction.emoji.name != jelentkezem && reaction.emoji.name != nemjelentkezem ) {
 	  
-	return reaction.remove(user); 	}
+	return reaction.remove(user); 	}*/
 });
 
 client.on('messageReactionRemove', (reaction, user, message) => {
