@@ -65,7 +65,7 @@ client.on('message', (message) => {
   }
 	//console.log(``);	
 
-	if (message.author.bot && message.channel.id === '458620540555493376'){
+	if (!message.author.bot && message.channel.id === '458620540555493376'){
 		client.channels.get('506538067847544833').send(" Trainerek figyelem! @everyone @here ");
 		client.channels.get('506538067847544833').send(message.content.slice(5));
 	}	
