@@ -45,7 +45,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
 	
 	    
 });
-const jelentkezem = "👍";
+const jelentkezem = "🖖";
 const nemjelentkezem = "👎";
 const prefix = "!";
 client.on('message', (message) => {
@@ -56,7 +56,7 @@ client.on('message', (message) => {
     message.channel.send(" Trainerek figyelem! @everyone @here ");
     message.channel.send(message.content.slice(5)).then(function (message) {
     message.react(jelentkezem);
-	message.react(nemjelentkezem);
+    //message.react(nemjelentkezem);
     
 	       
             }).catch(function() {
@@ -67,12 +67,18 @@ client.on('message', (message) => {
 
 	if (!message.author.bot && message.channel.id === '458620540555493376'){
 		client.channels.get('506538067847544833').send(" Trainerek figyelem! @everyone @here ");
-		client.channels.get('506538067847544833').send(message.content.slice(5));
+		client.channels.get('506538067847544833').send(message.content.slice(5)).then(function (message) {
+        	message.react(jelentkezem);
+		    
+            }).catch(function() { });;
 	}
 	
 	if (!message.author.bot && message.channel.id === '506538067847544833'){
 		client.channels.get('458620540555493376').send(" Trainerek figyelem! @everyone @here ");
-		client.channels.get('458620540555493376').send(message.content.slice(5));
+		client.channels.get('458620540555493376').send(message.content.slice(5)).then(function (message) {
+        	message.react(jelentkezem);
+		    
+            }).catch(function() { });;
 	}
 	
 });
