@@ -238,7 +238,9 @@ client.on('message', async message => {
         });
 	
     });
-    
+        if(!message.author.bot && message.channel.id === 'asfdsfgsd'){
+        message.delete(45000);
+    }
   }
   
 });   
