@@ -245,8 +245,8 @@ client.on('message', async message => {
 
 client.on('guildMemberAdd', member => {
 
-    const welcome = guild.channels.find(channel => channel.name === "welcome");
-    const szabalyzat = guild.channels.find(channel => channel.name === "szabalyzat");
+    //const welcome = channels.find(channel => channel.name === "welcome");
+    //const szabalyzat = channels.find(channel => channel.name === "szabalyzat");
 
     member.send(`
     Helló ${member} ! Üdv a ${guild.name} szerveren.
