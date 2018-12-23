@@ -42,7 +42,10 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
     msg.delete(1);
     msg.reply("Kérlek, szöveges formátumban jelentsd a raidet. Pl.: !red GYM neve - reccsenés időpontja - tier");
   }
-	
+
+	if (msg.channel.id === '458617725770661898' ) {
+	msg.delete(30000);
+	}	
 	    
 });
 const jelentkezem = "🖖";
