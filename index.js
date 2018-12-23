@@ -44,7 +44,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
   }
 
 	if (msg.channel.id === '458617725770661898' ) {
-	msg.delete(30000);
+	msg.delete(45000).catch();
 	}	
 	    
 });
