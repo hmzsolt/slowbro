@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const prefix = !!;
+const prefix = "!!";
 
 module.exports = (client, message) => {
     if (message.author.bot) return;
