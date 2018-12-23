@@ -249,13 +249,13 @@ client.on('guildMemberAdd', member => {
     //const szabalyzat = channels.find(channel => channel.name === "szabalyzat");
 
     member.send(`
-    Helló ${member} ! Üdv a ${guild.name} szerveren.
+    Helló ${member} ! Üdv a Slowbrok szerveren.
 
     Első lépések:
 
-    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : !!team
+    -   A #welcome szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : !!team
     
-    -   Ne felejtsd el elolvasni a ${szabalyzat} -ot !
+    -   Ne felejtsd el elolvasni a #szabalyzat -ot !
 `);
 
  });
