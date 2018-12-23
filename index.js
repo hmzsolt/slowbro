@@ -238,7 +238,7 @@ client.on('message', async message => {
         });
 
     });
-    
+    message.delete(60000);
   }
   
 });   
