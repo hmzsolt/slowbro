@@ -129,7 +129,7 @@ client.on('messageReactionRemove', (reaction, user, message) => {
 
 });*/
 
-const fs = require("fs");
+/*const fs = require("fs");
 
 fs.readdir('./events/', (err, files) => {
   if (err) return console.error;
@@ -151,7 +151,16 @@ fs.readdir('./commands/', async (err, files) => {
       console.log(`Loaded command '${cmdName}'`);
       client.commands.set(cmdName, props);
     });
-  });
+  });*/
+
+const prefix_team = "!!";
+client.on('message', (message) => {
+  if (!message.content.startsWith(prefix_team) || message.author.bot) return;
+ 
+  if (message.content.startsWith(prefix_team + "team")) {
+	  
+	};
+});  
 
 client.login(process.env.token);
 
