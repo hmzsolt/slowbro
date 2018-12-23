@@ -85,15 +85,16 @@ client.on('message', (message) => {
 
 
 var  jelentkezok = 0;
-client.on('messageReactionAdd', (reaction, user, message) => {
-	client.on('message', message => 
+client.on('messageReactionAdd', (reaction, user => {
+	client.on('message', msg => {
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	  var  jelentkezok = reaction.count-1;
 		
 	console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
 	console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
 	    
-	return console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);    
+	return console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
+	msg.channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);   
 	  
 	    
     }	
