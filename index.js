@@ -243,5 +243,22 @@ client.on('message', async message => {
   
 });   
 
+client.on('guildMemberAdd', member => {
+
+    const welcome = guild.channels.find(channel => channel.name === "welcome");
+    const szabalyzat = guild.channels.find(channel => channel.name === "szabalyzat");
+
+    member.send(`
+    Helló ${member} ! Üdv a ${guild.name} szerveren.
+
+    Első lépések:
+
+    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : !!team
+    
+    -   Ne felejtsd el elolvasni a ${szabalyzat} -ot !
+`);
+
+ });
+
 client.login(process.env.token);
 
