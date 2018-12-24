@@ -84,36 +84,31 @@ client.on('message', (message) => {
 
 
 var  jelentkezok = 0;
-client.on('messageReactionAdd', (reaction, user, message) => {
+client.on('messageReactionAdd', (reaction, user) => {
+    
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
-	  var  jelentkezok = reaction.count-1;
-	//user.send("Az aktuális Raid-re jelentkezők száma : ");
-	//user.send(jelentkezok);
-	
+	var  jelentkezok = reaction.count-1;
+    
+    client.on('message', (message) 	=> {
 	console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
 	console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
-	    
-	return console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);    
-	//console.log(jelentkezok);  
-	    
-    }	
-	/*if(reaction.emoji.name != jelentkezem && !message.author.bot ) {
-	  
-	return reaction.remove(user); 	}*/
+        
+	message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  
+    });	
+    }
 });
 
-client.on('messageReactionRemove', (reaction, user, message) => {
+client.on('messageReactionRemove', (reaction, user) => {
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
-	  var  jelentkezok = reaction.count-1;
-		
+	var  jelentkezok = reaction.count-1;
+    
+    client.on('message', (message) 	=> {
 	console.log(`${user.username} dereacted with "${reaction.emoji.name}".`);
 	console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
-	
-	    
-	//return user.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);    
-	  
-    }	
-		
+    
+    	message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  
+    });	
+    }
 });
 
 /*client.on('message', function(message) {
