@@ -98,7 +98,7 @@ client.on('messageReactionAdd', (reaction, user) => {
     }
 });
 
-client.on('messageReactionRemove', (reaction, user) => {
+/*client.on('messageReactionRemove', (reaction, user) => {
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	var  jelentkezok = reaction.count-1;
     
@@ -109,7 +109,7 @@ client.on('messageReactionRemove', (reaction, user) => {
     	message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  
     });	
     }
-});
+});*/
 
 /*client.on('message', function(message) {
     if (message.content == "^clear") {
