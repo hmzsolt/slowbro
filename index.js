@@ -20,7 +20,7 @@ client.user.setActivity("Pokemon Go")
     }) */   
 });
 
-client.on('message', msg => {
+client.on('message', async msg => {
   var helloResponses = [
 	"Sokallom.",
 	"Tagság megvonás 1 hétig!", 
@@ -42,6 +42,10 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
     msg.delete(1);
     msg.reply("Kérlek, szöveges formátumban jelentsd a raidet. Pl.: !red GYM neve - reccsenés időpontja - tier");
   }
+	
+	if (!msg.author.bot && msg.channel.id === '458617725770661898')   {
+    	await message.delete(45000).catch(O_o=>{})
+	}
 	    
 });
 const jelentkezem = "🖖";
