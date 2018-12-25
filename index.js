@@ -152,7 +152,8 @@ client.on('message', async message => {
   if (!message.content.startsWith(prefix_team) || message.author.bot) return;
  
   if (message.content.startsWith(prefix_team + "team")) {
-     await message.delete().catch(O_o=>{});
+     //await message.delete().catch(O_o=>{});
+	  message.delete();
 
     const a = message.guild.roles.get('458317524581351426'); // valor
     const b = message.guild.roles.get('458610003482509322'); // mystic
