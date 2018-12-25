@@ -246,7 +246,7 @@ client.on('guildMemberAdd', member => {
 
     member.send(`
     Helló ${member} ! Üdv a Slowbrok szerveren.
-    Első lépések:
+    \nElső lépések:
     -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : !!team
     
     -   Ne felejtsd el elolvasni a ${szabalyzat} -ot !
