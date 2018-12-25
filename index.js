@@ -226,11 +226,9 @@ client.on('message', async message => {
                     message.channel.send(`Sikeresen hozzá lettél adva a **${c.name}** csapathoz!`).then(m => m.delete(3000));
                     msg.delete();
                     break;
-		default : 
-                    msg.delete(45000);
-                    break;	    
             }
         }).catch(collected => {
+		msg.delete(2000);
             	return message.channel.send(`Nem választottál csapatot !`).then(m => m.delete(3000));
         });
 	
