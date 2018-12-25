@@ -228,7 +228,8 @@ client.on('message', async message => {
                     break;
             }
         }).catch(collected => {
-            return message.channel.send(`Nem választottál csapatot !`).then(m => m.delete(3000));
+            	message.delete(45000).catch(O_o=>{});
+		return message.channel.send(`Nem választottál csapatot !`).then(m => m.delete(3000));
         });
 	
     });
