@@ -163,7 +163,7 @@ client.on('message', async message => {
 
     const embed = new Discord.RichEmbed()
         .setTitle('Választható csapatok:')
-        //.setThumbnail(bot.user.displayAvatarURL)
+        .setThumbnail(client.user.displayAvatarURL)
         .setDescription(`
                 
         🇻 Valor ${a.toString()}
