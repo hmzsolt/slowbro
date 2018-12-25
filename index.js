@@ -112,15 +112,14 @@ client.on('messageReactionAdd', (reaction, user) => {
 });*/
 
 const prefix_say = "!!";
-client.on('message', (message, args) => {
+client.on('message', async message => {
     
 	if (!message.content.startsWith(prefix_say) || message.author.bot) return;
 	
 	if (message.content.startsWith(prefix_say + "say")) {
 	
-    const response = args.join(' ');
     message.delete();
-    message.channel.send(response);
+    message.channel.send(message.content.slice(5));
 	}	
 });
 
