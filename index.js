@@ -111,17 +111,18 @@ client.on('messageReactionAdd', (reaction, user) => {
     }
 });*/
 
-/*client.on('message', function(message) {
-    if (message.content == "^clear") {
-        if (message.member.hasPermission("MANAGE_MESSAGES")) {
-            message.channel.fetchMessages()
-               .then(function(list){
-                    message.channel.bulkDelete(list);
-                }, function(err){message.channel.send("ERROR: ERROR CLEARING CHANNEL.")})                        
-        }
-    }
-
-});*/
+const prefix_say = "!!";
+client.on(message, args => {
+    
+	if (!message.content.startsWith(prefix_say) || message.author.bot) return;
+	
+	if (message.content.startsWith(prefix_say + "say")) {
+	
+    const response = args.join(' ');
+    message.delete();
+    message.channel.send(response);
+	}	
+});
 
 /*const fs = require("fs");
 
