@@ -112,7 +112,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 });*/
 
 const prefix_say = "!!";
-client.on(message, args => {
+client.on('message', message, args => {
     
 	if (!message.content.startsWith(prefix_say) || message.author.bot) return;
 	
