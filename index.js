@@ -163,7 +163,7 @@ client.on('message', async message => {
 
     const embed = new Discord.RichEmbed()
         .setTitle('Választható csapatok:')
-        .setThumbnail('https://raw.githubusercontent.com/hmzsolt/slowbro/master/f2vxtZYdIU3C_ZWZkoBorqacLg6NM8f3hAJ_UqDDr-0.png')
+        .setThumbnail(bot.user.displayAvatarURL)
         .setDescription(`
                 
         🇻 Valor ${a.toString()}
@@ -228,8 +228,7 @@ client.on('message', async message => {
                     break;
             }
         }).catch(collected => {
-            	message.delete(45000).catch(O_o=>{});
-		return message.channel.send(`Nem választottál csapatot !`).then(m => m.delete(3000));
+            	return message.channel.send(`Nem választottál csapatot !`).then(m => m.delete(3000));
         });
 	
     });
