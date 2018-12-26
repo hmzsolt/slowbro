@@ -82,7 +82,6 @@ client.on('message', (message) => {
 	
 });
 
-
 client.on('messageReactionAdd', (reaction, user) => {
     
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
@@ -93,22 +92,25 @@ client.on('messageReactionAdd', (reaction, user) => {
     
     const channel = client.channels.find(channel => channel.name === 'reports');
     
+    
 	channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
-    }    
-});		
+    }
+});	
 
-/*client.on('messageReactionRemove', (reaction, user) => {
+client.on('messageReactionRemove', (reaction, user) => {
+    
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	var  jelentkezok = reaction.count-1;
     
-    client.on('message', (message) 	=> {
-	console.log(`${user.username} dereacted with "${reaction.emoji.name}".`);
+    console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
 	console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
     
-    	message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  
-    });	
+    const channel = client.channels.find(channel => channel.name === 'reports');
+    
+    
+	channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
     }
-});*/
+});	
 
 const prefix_say = "!!";
 client.on('message', async message => {
