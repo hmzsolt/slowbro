@@ -254,6 +254,14 @@ client.on('guildMemberAdd', member => {
     -   Ne felejtsd el elolvasni a ${szabalyzat} -ot !
 `);
 
+	member.guild.channels.get('458618198212739083').send(`
+    Helló ${member} ! Üdv a Slowbrok szerveren.
+    \nElső lépések:
+    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : !!team
+    
+    -   Ne felejtsd el elolvasni a ${szabalyzat} -ot !
+`);
+	
 });
 
 client.login(process.env.token);
