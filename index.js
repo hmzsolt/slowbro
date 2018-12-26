@@ -83,20 +83,17 @@ client.on('message', (message) => {
 });
 
 
-/*var  jelentkezok = 0;
-client.on('messageReactionAdd', (reaction, user) => {
+client.on('messageReactionAdd', (reaction, user, member) => {
     
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	var  jelentkezok = reaction.count-1;
     
-    client.on('message', (message) 	=> {
-	console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
+    console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
 	console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
         
-	message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  
-    });	
-    }
-});/*
+	member.guild.channels.get('519233402055163905').send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
+    }    
+});
 
 /*client.on('messageReactionRemove', (reaction, user) => {
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
