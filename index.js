@@ -91,11 +91,11 @@ client.on('messageReactionAdd', (reaction, user) => {
     console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
 	console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
     
-    const channel = client.channels.find('name', 'reports');
+    const channel = client.channels.find(channel => channel.name === 'reports');
     
 	channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
     }    
-});	
+});		
 
 /*client.on('messageReactionRemove', (reaction, user) => {
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
