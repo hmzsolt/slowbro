@@ -87,13 +87,17 @@ client.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	var  jelentkezok = reaction.count-1;
     
-    console.log(`${user.username} reacted with "${reaction.emoji.name}".`);
-	console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
+    console.log(`${user.username} reacted with "${reaction.emoji.name}". Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
     
-    const channel = client.channels.find(channel => channel.name === 'red🔴');
+    const channel = client.channels.find(channel => channel.name === 'reports'); // red🔴
+        
+    //channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
     
-    
-	channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
+    channel.fetchMessage(client.user.lastMessage).then(async msg => {
+        await channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
+        if (msg) msg.delete();
+      });
+
     }
 });	
 
@@ -102,13 +106,17 @@ client.on('messageReactionRemove', (reaction, user) => {
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	var  jelentkezok = reaction.count-1;
     
-    console.log(`${user.username} unreacted with "${reaction.emoji.name}".`);
-	console.log(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
+    console.log(`${user.username} reacted with "${reaction.emoji.name}". Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
     
-    const channel = client.channels.find(channel => channel.name === 'red🔴');
+    const channel = client.channels.find(channel => channel.name === 'reports');
+        
+    //channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
     
-    
-	channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
+    channel.fetchMessage(client.user.lastMessage).then(async msg => {
+        await channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
+        if (msg) msg.delete();
+      });
+
     }
 });	
 
