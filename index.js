@@ -56,6 +56,7 @@ client.on('message', (message) => {
     message.channel.send(message.content.slice(5)).then(function (message) {
     message.react(jelentkezem);
     //message.react(nemjelentkezem);
+    message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** 0 fő. ***`);	    
     
 	       
             }).catch(function() {
@@ -64,7 +65,7 @@ client.on('message', (message) => {
   }
 	//console.log(``);	
 
-	if (!message.author.bot && message.channel.id === '458620540555493376'){
+	/*if (!message.author.bot && message.channel.id === '458620540555493376'){
 		client.channels.get('506538067847544833').send(" Trainerek figyelem! @everyone @here ");
 		client.channels.get('506538067847544833').send(message.content.slice(5)).then(function (message) {
         	message.react(jelentkezem);
@@ -78,7 +79,7 @@ client.on('message', (message) => {
         	message.react(jelentkezem);
 		    
             }).catch(function() { });;
-	}
+	}*/
 	
 });
 
