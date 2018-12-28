@@ -233,17 +233,20 @@ client.on('guildMemberAdd', member => {
         .setThumbnail(client.user.displayAvatarURL)
         .setDescription(`
                 
-        🇻 Valor ${a.toString()}
-        🇲 Mystic ${b.toString()}
-        🇮 Instinct ${c.toString()}
+        🇻 valor ${a.toString()}
+        🇲 mystic ${b.toString()}
+        🇮 instinct ${c.toString()}
         `)
         .setColor(0xdd9323)
         //.setFooter(`ID: ${member.author.id}`);	
-
+		
+    member.send(`embed`);
+    
     member.send(`
     Helló ${member} ! Üdv a Slowbrok szerveren.
     \nElső lépések:\n
-    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : !!team\nMajd a megadott reakciók közül kiválasztod a megfelelőt.
+    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : !!team majd a csapatod nevét\n
+	pl.:\n !!team valor \n !!team mystic \n !! team instinct
     
     -   Ne felejtsd el elolvasni a ${szabalyzat} -ot !
 `);
@@ -253,7 +256,8 @@ client.on('guildMemberAdd', member => {
 	member.guild.channels.get('458618198212739083').send(`
     Helló ${member} ! Üdv a Slowbrok szerveren.
     \nElső lépések:\n
-    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : !!team\nMajd a megadott reakciók közül kiválasztod a megfelelőt.
+    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : !!team majd a csapatod nevét\n
+	pl.:\n !!team valor \n !!team mystic \n !! team instinct
     
     -   Ne felejtsd el elolvasni a ${szabalyzat} -ot !
 `);
