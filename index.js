@@ -202,10 +202,7 @@ client.on('message', async message => {
 
             switch (reaction.emoji.name) {
                 case '🇻':
-                    if (message.member.roles.has(a.id)) {
-                        msg.delete(2000);
-                        return message.channel.send('Van már ilyen rangod!').then(m => m.delete(3000));
-                    }
+                    
                     message.member.addRole(a.id).catch(err => {
                         console.log(err);
                         return message.channel.send(`Hiba: **${err.message}**.`);
@@ -214,10 +211,7 @@ client.on('message', async message => {
                     msg.delete();
                     break;
                 case '🇲':
-                    if (message.member.roles.has(b.id)) {
-                        msg.delete(2000);
-                        return message.channel.send('Van már ilyen rangod!').then(m => m.delete(3000));
-                    }
+                    
                     message.member.addRole(b.id).catch(err => {
                         console.log(err);
                         return message.channel.send(`Hiba: **${err.message}**.`);
@@ -226,10 +220,7 @@ client.on('message', async message => {
                     msg.delete();
                     break;
                 case '🇮':
-                    if (message.member.roles.has(c.id)) {
-                        msg.delete(2000);
-                        return message.channel.send('Van már ilyen rangod!').then(m => m.delete(3000));
-                    }
+                    
                     message.member.addRole(c.id).catch(err => {
                         console.log(err);
                         return message.channel.send(`Hiba: **${err.message}**.`);
