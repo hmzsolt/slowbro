@@ -130,7 +130,7 @@ client.on('message', async message => {
 	}	
 });
 
-const prefix_team = "!!";
+/*const prefix_team = "!!";
 client.on('message', async message => {
   if (!message.content.startsWith(prefix_team) || message.author.bot) return;
  
@@ -215,7 +215,31 @@ client.on('message', async message => {
 
   }
   
-}); 
+}); */
+
+const prefix_team = "!!";
+client.on('message', async message => {
+  if (!message.content.startsWith(prefix_team) || message.author.bot) return;
+ 
+  if (message.content.startsWith(prefix_team + "team") && message.channel.id === '458617725770661898'){
+  
+	  var args = message.content.split(' ');
+	  if (args[1] === 'valor'){
+	  var role = message.guild.roles.find(roles => role.name === "valor");
+		  message.member.addRole(role.id);
+	  }
+	  else if (args[1] === 'mystic'){
+	  var role = message.guild.roles.get(roles => role.name === "mystic");
+		  message.member.addRole(role.id);
+	  }
+	  else if (args[1] === 'instinct'){
+	  var role = message.guild.roles.get(roles => role.name === "instinct");
+		  message.member.addRole(role.id);
+	  }
+  }
+	  
+});	  
+
 client.on('guildMemberAdd', member => {
 
     //const welcome = channels.find(channel => channel.name === "welcome");
