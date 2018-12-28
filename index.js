@@ -52,8 +52,7 @@ client.on('message', (message) => {
  
   if (message.content.startsWith(prefix + "red")) {
     message.delete(1).catch();
-    message.channel.send(" Trainerek figyelem! @everyone @here ");
-    message.channel.send(message.content.slice(5)).then(function (message) {
+    message.channel.send(`Trainerek figyelem! @everyone @here \n ${message.content.slice(5)}`).then(function (message) {
     message.react(jelentkezem);
     //message.react(nemjelentkezem);
     message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** 0 fő. ***`);	    
@@ -94,10 +93,13 @@ client.on('messageReactionAdd', (reaction, user) => {
         
     //channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
     
-    channel.fetchMessage(client.user.lastMessage).then(async msg => {
+    /*channel.fetchMessage(client.user.lastMessage).then(async msg => {
         await channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
         if (msg) msg.delete();
-      });
+      });*/
+	  channel.fetchMessage(client.user.lastMessage).then(msg => {
+  if (msg) msg.edit(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
+});  
 
     }
 });	
@@ -113,11 +115,13 @@ client.on('messageReactionRemove', (reaction, user) => {
         
     //channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
     
-    channel.fetchMessage(client.user.lastMessage).then(async msg => {
+    /*channel.fetchMessage(client.user.lastMessage).then(async msg => {
         await channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
         if (msg) msg.delete();
-      });
-
+      });*/
+	channel.fetchMessage(client.user.lastMessage).then(msg => {
+  if (msg) msg.edit(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
+});  
     }
 });	
 
@@ -162,13 +166,10 @@ client.on('message', async message => {
   if (!message.content.startsWith(prefix_team) || message.author.bot) return;
  
   if (message.content.startsWith(prefix_team + "team")) {
-     //await message.delete().catch(O_o=>{});
-	  message.delete();
-
-    const a = message.guild.roles.find(role => role.name === "valor"); // valor 458317524581351426
-    const b = message.guild.roles.find(role => role.name === "mystic"); // mystic 458610003482509322
-    const c = message.guild.roles.find(role => role.name === "instinct"); // instinct 458611006508105728
-
+    message.delete();
+    const a = message.guild.roles.get('458317524581351426'); // valor
+    const b = message.guild.roles.get('458610003482509322'); // mystic
+    const c = message.guild.roles.get('458611006508105728'); // instinct
 
     const filter = (reaction, user) => ['🇻', '🇲', '🇮'].includes(reaction.emoji.name) && user.id === message.author.id;
 
@@ -178,9 +179,7 @@ client.on('message', async message => {
         .setDescription(`
                 
         🇻 Valor ${a.toString()}
-
         🇲 Mystic ${b.toString()}
-
         🇮 Instinct ${c.toString()}
         `)
         .setColor(0xdd9323)
@@ -202,8 +201,11 @@ client.on('message', async message => {
 
             switch (reaction.emoji.name) {
                 case '🇻':
-                    
-                    message.member.addRole(a.id).catch(err => {
+                    if (message.member.roles.has(a.id)) {
+                        msg.delete(2000);
+                        return message.channel.send('Van már ilyen rangod!').then(m => m.delete(3000));
+                    }
+                    message.member.addRole(a).catch(err => {
                         console.log(err);
                         return message.channel.send(`Hiba: **${err.message}**.`);
                     });
@@ -211,8 +213,11 @@ client.on('message', async message => {
                     msg.delete();
                     break;
                 case '🇲':
-                    
-                    message.member.addRole(b.id).catch(err => {
+                    if (message.member.roles.has(b.id)) {
+                        msg.delete(2000);
+                        return message.channel.send('Van már ilyen rangod!').then(m => m.delete(3000));
+                    }
+                    message.member.addRole(b).catch(err => {
                         console.log(err);
                         return message.channel.send(`Hiba: **${err.message}**.`);
                     });
@@ -220,8 +225,11 @@ client.on('message', async message => {
                     msg.delete();
                     break;
                 case '🇮':
-                    
-                    message.member.addRole(c.id).catch(err => {
+                    if (message.member.roles.has(c.id)) {
+                        msg.delete(2000);
+                        return message.channel.send('Van már ilyen rangod!').then(m => m.delete(3000));
+                    }
+                    message.member.addRole(c).catch(err => {
                         console.log(err);
                         return message.channel.send(`Hiba: **${err.message}**.`);
                     });
@@ -231,14 +239,14 @@ client.on('message', async message => {
             }
         }).catch(collected => {
 		msg.delete(2000);
-            	return message.channel.send(`Nem választottál csapatot !`).then(m => m.delete(3000));
+        return message.channel.send(`Nem választottál csapatot !`).then(m => m.delete(3000));
         });
 	
     });
 
   }
   
-});   
+}); 
 client.on('guildMemberAdd', member => {
 
     //const welcome = channels.find(channel => channel.name === "welcome");
