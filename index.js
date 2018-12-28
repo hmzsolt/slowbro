@@ -130,30 +130,6 @@ client.on('message', async message => {
 	}	
 });
 
-/*const fs = require("fs");
-
-fs.readdir('./events/', (err, files) => {
-  if (err) return console.error;
-  files.forEach(file => {
-    if (!file.endsWith('.js')) return;
-    const evt = require(`./events/${file}`);
-    let evtName = file.split('.')[0];
-    console.log(`Loaded event '${evtName}'`);
-    client.on(evtName, evt.bind(null, client));
-  });
-});
-
-fs.readdir('./commands/', async (err, files) => {
-    if (err) return console.error;
-    files.forEach(file => {
-      if (!file.endsWith('.js')) return;
-      let props = require(`./commands/${file}`);
-      let cmdName = file.split('.')[0];
-      console.log(`Loaded command '${cmdName}'`);
-      client.commands.set(cmdName, props);
-    });
-  });*/
-
 const prefix_team = "!!";
 client.on('message', async message => {
   if (!message.content.startsWith(prefix_team) || message.author.bot) return;
@@ -247,6 +223,22 @@ client.on('guildMemberAdd', member => {
 
     const welcome = client.channels.get('458617725770661898'); //welcome
     const szabalyzat = client.channels.get('460716935491878912'); //szabalyzat
+	
+    const a = member.guild.roles.get('458317524581351426'); // valor
+    const b = member.guild.roles.get('458610003482509322'); // mystic
+    const c = member.guild.roles.get('458611006508105728'); // instinct
+	
+    const embed = new Discord.RichEmbed()
+        .setTitle('Választható csapatok:')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setDescription(`
+                
+        🇻 Valor ${a.toString()}
+        🇲 Mystic ${b.toString()}
+        🇮 Instinct ${c.toString()}
+        `)
+        .setColor(0xdd9323)
+        .setFooter(`ID: ${member.author.username}`);	
 
     member.send(`
     Helló ${member} ! Üdv a Slowbrok szerveren.
@@ -255,6 +247,8 @@ client.on('guildMemberAdd', member => {
     
     -   Ne felejtsd el elolvasni a ${szabalyzat} -ot !
 `);
+	
+	member.guild.channels.get('458618198212739083').send(embed);
 
 	member.guild.channels.get('458618198212739083').send(`
     Helló ${member} ! Üdv a Slowbrok szerveren.
