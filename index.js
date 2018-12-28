@@ -239,7 +239,7 @@ client.on('message', async message => {
                     break;
             }
         }).catch(collected => {
-		//msg.delete(2000);
+		msg.delete(2000);
             	return message.channel.send(`Nem választottál csapatot !`).then(m => m.delete(3000));
         });
 	
