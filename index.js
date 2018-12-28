@@ -238,7 +238,7 @@ client.on('guildMemberAdd', member => {
         🇮 Instinct ${c.toString()}
         `)
         .setColor(0xdd9323)
-        .setFooter(`ID: ${member.author.id}`);	
+        //.setFooter(`ID: ${member.author.id}`);	
 
     member.send(`
     Helló ${member} ! Üdv a Slowbrok szerveren.
