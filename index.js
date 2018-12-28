@@ -165,9 +165,9 @@ client.on('message', async message => {
      //await message.delete().catch(O_o=>{});
 	  message.delete();
 
-    const a = message.guild.roles.get('458317524581351426'); // valor
-    const b = message.guild.roles.get('458610003482509322'); // mystic
-    const c = message.guild.roles.get('458611006508105728'); // instinct
+    const a = message.guild.roles.find(role => role.name === "valor"); // valor 458317524581351426
+    const b = message.guild.roles.find(role => role.name === "mystic"); // mystic 458610003482509322
+    const c = message.guild.roles.find(role => role.name === "instinct"); // instinct 458611006508105728
 
 
     const filter = (reaction, user) => ['🇻', '🇲', '🇮'].includes(reaction.emoji.name) && user.id === message.author.id;
