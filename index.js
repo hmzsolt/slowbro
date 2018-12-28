@@ -259,7 +259,7 @@ client.on('guildMemberAdd', member => {
     member.send(`
     Helló ${member} ! Üdv a Slowbrok szerveren.
     \nElső lépések:\n
-    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : !!team
+    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : !!team/nMajd a megadott reakciók közül kiválasztod a megfelelőt.
     
     -   Ne felejtsd el elolvasni a ${szabalyzat} -ot !
 `);
@@ -267,7 +267,7 @@ client.on('guildMemberAdd', member => {
 	member.guild.channels.get('458618198212739083').send(`
     Helló ${member} ! Üdv a Slowbrok szerveren.
     \nElső lépések:\n
-    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : !!team
+    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : !!team/nMajd a megadott reakciók közül kiválasztod a megfelelőt.
     
     -   Ne felejtsd el elolvasni a ${szabalyzat} -ot !
 `);
