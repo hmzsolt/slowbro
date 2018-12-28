@@ -223,17 +223,18 @@ client.on('message', async message => {
  
   if (message.content.startsWith(prefix_team + "team") && message.channel.id === '458617725770661898'){
   
-	  var args = message.content.split(' ');
+	  var args = message.content.split(" ");
+		console.log(args);
 	  if (args[1] === 'valor'){
-	  var role = message.guild.roles.find(roles => role.name === "valor");
+	  var role = message.guild.roles.get('458317524581351426');
 		  message.member.addRole(role.id);
 	  }
 	  else if (args[1] === 'mystic'){
-	  var role = message.guild.roles.find(roles => role.name === "mystic");
+	  var role = message.guild.roles.get('458610003482509322');
 		  message.member.addRole(role.id);
 	  }
 	  else if (args[1] === 'instinct'){
-	  var role = message.guild.roles.find(roles => role.name === "instinct");
+	  var role = message.guild.roles.get('458611006508105728');
 		  message.member.addRole(role.id);
 	  }
   }
