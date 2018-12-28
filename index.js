@@ -229,11 +229,11 @@ client.on('message', async message => {
 		  message.member.addRole(role.id);
 	  }
 	  else if (args[1] === 'mystic'){
-	  var role = message.guild.roles.get(roles => role.name === "mystic");
+	  var role = message.guild.roles.find(roles => role.name === "mystic");
 		  message.member.addRole(role.id);
 	  }
 	  else if (args[1] === 'instinct'){
-	  var role = message.guild.roles.get(roles => role.name === "instinct");
+	  var role = message.guild.roles.find(roles => role.name === "instinct");
 		  message.member.addRole(role.id);
 	  }
   }
