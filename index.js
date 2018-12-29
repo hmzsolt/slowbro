@@ -222,7 +222,7 @@ client.on('message', async message => {
   if (!message.content.startsWith(prefix_team) || message.author.bot) return;
  
   if (message.content.startsWith(prefix_team + "team") && message.channel.id === '458617725770661898'){
-  
+  		message.delete(10);
 	  var args = message.content.split(" ");
 		console.log(args);
 	  if (args[1] === 'valor'){
