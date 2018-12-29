@@ -40,7 +40,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
 	  
   if (msg.attachments.size > 0 && msg.channel.id === '458620540555493376')   {
     msg.delete(1);
-    msg.reply("Kérlek, szöveges formátumban jelentsd a raidet. Pl.: !red GYM neve - reccsenés időpontja - tier");
+    msg.reply("Kérlek, szöveges formátumban jelentsd a raidet. Pl.: !red GYM neve - reccsenés időpontja - tier").then(m => m.delete(60000));
   }
 	    
 });
