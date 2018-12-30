@@ -88,13 +88,13 @@ client.on('messageReactionAdd', (reaction, user) => {
 	var  jelentkezok = reaction.count-1;
     
     console.log(`${user.username} reacted with "${reaction.emoji.name}". Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
-    
-    const channel = client.channels.find(channel => channel.name === 'red🔴'); // red🔴
+    var users = new Array(user.username++);
+    const channel = client.channels.find(channel => channel.name === 'reports'); // red🔴
         
     //channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
     
     channel.fetchMessage(client.user.lastMessage).then(async msg => {
-        await channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
+        await channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. *** : ${users} `);
         if (msg) msg.delete();
       });
     }
