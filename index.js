@@ -89,8 +89,8 @@ client.on('messageReactionAdd', (reaction, user) => {
     
     console.log(`${user.username} reacted with "${reaction.emoji.name}". Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
     
-    let users = [];
-    users.unshift(user.username);
+    let users = [user.username];
+    users.push(user.username);
 	    
     console.log(users);
 	    
