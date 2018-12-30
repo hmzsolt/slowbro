@@ -89,7 +89,7 @@ client.on('messageReactionAdd', (reaction, user) => {
     
     console.log(`${user.username} reacted with "${reaction.emoji.name}". Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
     
-    var users = [user.username++];
+    var users = [user.username];
     console.log(users);
 	    
     const channel = client.channels.find(channel => channel.name === 'reports'); // red🔴
