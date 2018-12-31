@@ -86,11 +86,7 @@ client.on('messageReactionAdd', (reaction, user) => {
     
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	var  jelentkezok = reaction.count-1;
-    
-    let users = [];
-    let users = users.push(user.username);
-    console.log(users);
-	    
+ 
     console.log(`${user.username} reacted with "${reaction.emoji.name}". Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
         	    
     const channel = client.channels.find(channel => channel.name === 'reports'); // red🔴
