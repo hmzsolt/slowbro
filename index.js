@@ -131,7 +131,7 @@ client.on('message', async message => {
 });
 
 const prefix_clear = "!!";
-client.on('message', args, async message => {
+client.on('message', async message => {
     
 	if (!message.content.startsWith(prefix_clear) || message.author.bot) return;
 	
