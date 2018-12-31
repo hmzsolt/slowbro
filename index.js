@@ -87,6 +87,7 @@ client.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	var  jelentkezok = reaction.count-1;
     
+    let users[];
     let users = users.push(user.username);
     console.log(users);
 	    
