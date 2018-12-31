@@ -100,7 +100,7 @@ client.on('messageReactionAdd', (reaction, user) => {
     //channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
     
     channel.fetchMessage(client.user.lastMessage).then(async msg => {
-        await channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. *** ( ${users} )`);
+        await channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
         if (msg) msg.delete();
       });
     }
