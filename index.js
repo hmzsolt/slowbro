@@ -136,7 +136,7 @@ client.on('message', async message => {
 	if (!message.content.startsWith(prefix_clear) || message.author.bot) return;
 	
 	if (message.content.startsWith(prefix_clear + "clear")) {
-	
+	var args = message.content.split(" ");
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No.");
     if(!args[0]) return message.channel.send("no");
     message.channel.bulkDelete(args[0]).then(() => {
