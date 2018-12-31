@@ -88,7 +88,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 	var  jelentkezok = reaction.count-1;
     
     let users = users.push(user.username);
-    console log(users);
+    console.log(users);
 	    
     console.log(`${user.username} reacted with "${reaction.emoji.name}". Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
         	    
