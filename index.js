@@ -113,7 +113,7 @@ client.on('messageReactionRemove', (reaction, user) => {
     
     console.log(`${user.username} unreacted with "${reaction.emoji.name}". Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
     
-    const channel = client.channels.find(channel => channel.name === 'red🔴');
+    const channel = client.channels.find(channel => channel.name === 'reports');
         
     //channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
     
