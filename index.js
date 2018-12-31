@@ -89,8 +89,6 @@ client.on('messageReactionAdd', (reaction, user) => {
     
     console.log(`${user.username} reacted with "${reaction.emoji.name}". Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
         	    
-    console.log(users);
-	    
     const channel = client.channels.find(channel => channel.name === 'red🔴'); // red🔴
         
     //channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
@@ -129,6 +127,23 @@ client.on('message', async message => {
 	
      await message.delete().catch(O_o=>{});
     message.channel.send(message.content.slice(5));
+	}	
+});
+
+const prefix_clear = "!!";
+client.on('message', args, async message => {
+    
+	if (!message.content.startsWith(prefix_clear) || message.author.bot) return;
+	
+	if (message.content.startsWith(prefix_clear + "clear")) {
+	
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No.");
+    if(!args[0]) return message.channel.send("no");
+    message.channel.bulkDelete(args[0]).then(() => {
+    message.channel.send(`Clear ${args[0]} messages.`).then(msg => msg.delete(2000));
+    
+      });
+        
 	}	
 });
 
