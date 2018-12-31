@@ -87,7 +87,7 @@ client.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	var  jelentkezok = reaction.count-1;
     
-    let fetchedUsers = reaction.fetchUsers();
+    let fetchedUsers = reaction.fetchUsers(2);
     //fetchedUsers = fetchedUsers.array();
     console.log(fetchedUsers);	    
 	    
