@@ -139,8 +139,8 @@ client.on('message', async message => {
     var args = message.content.split(" ");
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No.");
     if(!args[1]) return message.channel.send("no");
-    message.channel.bulkDelete(args[1]).then(().catch() => {
-    message.channel.send(`***${args[1]} üzenet törölve.***`).then(msg => msg.delete(2000));
+    message.channel.bulkDelete(args[1]).then(() => {
+    message.channel.send(`***${args[1]} üzenet törölve.***`).then(msg => msg.delete(2000)).catch(function() { });
     
       });
         
