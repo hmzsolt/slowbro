@@ -4,8 +4,8 @@ const client = new Discord.Client();
 function catchErr (err, message) {
     client.user.get('447676992431849483').send("There was an error at channel " + message.channel + " in guild " + message.guild);
     client.user.get('447676992431849483').send("ERROR ```" + err + "```");
-    member.guild.channels.get('519233402055163905').send("There was an error at channel " + message.channel + " in guild " + message.guild);
-    member.guild.channels.get('519233402055163905').send("ERROR ```" + err + "```");
+    //member.guild.channels.get('519233402055163905').send("There was an error at channel " + message.channel + " in guild " + message.guild);
+    //member.guild.channels.get('519233402055163905').send("ERROR ```" + err + "```");
 }
 
 client.on('ready', () => {
@@ -69,24 +69,7 @@ client.on('message', (message) => {
               //Something
              });
   }
-	//console.log(``);	
-
-	/*if (!message.author.bot && message.channel.id === '458620540555493376'){
-		client.channels.get('506538067847544833').send(" Trainerek figyelem! @everyone @here ");
-		client.channels.get('506538067847544833').send(message.content.slice(5)).then(function (message) {
-        	message.react(jelentkezem);
-		    
-            }).catch(function() { });;
-	}
-	
-	if (!message.author.bot && message.channel.id === '506538067847544833'){
-		client.channels.get('458620540555493376').send(" Trainerek figyelem! @everyone @here ");
-		client.channels.get('458620540555493376').send(message.content.slice(5)).then(function (message) {
-        	message.react(jelentkezem);
-		    
-            }).catch(function() { });;
-	}*/
-	
+		
 });
 
 client.on('messageReactionAdd', (reaction, user) => {
@@ -102,7 +85,7 @@ client.on('messageReactionAdd', (reaction, user) => {
     
     channel.fetchMessage(client.user.lastMessage).then(async msg => {
         await channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
-        if (msg) msg.delete();
+        if (msg) msg.delete().catch(O_o=>{});
       });
     }
 });	
@@ -120,7 +103,7 @@ client.on('messageReactionRemove', (reaction, user) => {
     
     channel.fetchMessage(client.user.lastMessage).then(async msg => {
         await channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
-        if (msg) msg.delete();
+        if (msg) msg.delete().catch(O_o=>{});
       });
     }
 });	
