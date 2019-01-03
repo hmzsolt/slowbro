@@ -326,7 +326,7 @@ if (message.content.startsWith(prefix_tempmute + "tempmute")){
   //if(!reason) return message.reply("Please supply a reason.");
 
   let muterole = message.guild.roles.find(`name`, "muted");
-  //start of create role
+ /* //start of create role
   if(!muterole){
     try{
       muterole = await message.guild.createRole({
@@ -344,14 +344,14 @@ if (message.content.startsWith(prefix_tempmute + "tempmute")){
       console.log(e.stack);
     }
   }
-  //end of create role
+  //end of create role*/
   let mutetime = args[2];
   if(!mutetime) return message.reply("You didn't specify a time!");
 
   message.delete().catch(O_o=>{});
 
   try{
-    await tomute.send(`Hi! You've been muted for ${mutetime}. Sorry!`)
+    await tomute.send(`Helló. Rosszalkodás miatt némítva lettél egy kis időre. Sorry!`)
   }catch(e){
     message.channel.send(`A user has been muted... but their DMs are locked. They will be muted for ${mutetime}`)
   }
@@ -365,7 +365,7 @@ if (message.content.startsWith(prefix_tempmute + "tempmute")){
   .addField("Length", mutetime)
   //.addField("Reason", reason);
 
-  let reportschannel = message.guild.channels.find(`name`, "reports");
+  let reportschannel = message.guild.channels.find(channel => channel.name === 'reports');
   if(!reportschannel) return message.reply("Please create a reports channel first!");
   reportschannel.send(muteembed);
 
