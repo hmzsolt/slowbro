@@ -374,7 +374,7 @@ if (message.content.startsWith(prefix_tempmute + "tempmute")){
   setTimeout(function(){
     tomute.removeRole(muterole.id);
     message.channel.send(`<@${tomute.id}> has been unmuted!`);
-  }, (mutetime));
+  }, (60000*(mutetime)));
 
 
 //end of module
