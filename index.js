@@ -309,7 +309,7 @@ client.on('guildMemberAdd', member => {
 `);
 	
 });
-const ms = require("ms");
+/*const ms = require("ms");
 const prefix_tempmute = "!!";
 client.on('message', async message => {
 
@@ -379,7 +379,7 @@ if (message.content.startsWith(prefix_tempmute + "tempmute")){
 
 //end of module
 }
-});
+});*/
 
 client.login(process.env.token);
 
