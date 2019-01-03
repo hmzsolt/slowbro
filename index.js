@@ -1,6 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+function catchErr (err, message) {
+    client.user.get('447676992431849483').send("There was an error at channel " + message.channel + " in guild " + message.guild);
+    client.user.get('447676992431849483').send("ERROR ```" + err + "```");
+    member.guild.channels.get('519233402055163905').send("There was an error at channel " + message.channel + " in guild " + message.guild);
+    member.guild.channels.get('519233402055163905').send("ERROR ```" + err + "```");
+}
+
 client.on('ready', () => {
 client.user.setActivity("b0t")
   console.log(`Logged in as ${client.user.tag} on ${client.guilds.size} server(s)!`);
@@ -133,6 +140,8 @@ client.on('message', async message => {
 const prefix_clear = "!!";
 client.on('message', async message => {
     
+	try {
+	
     if (!message.content.startsWith(prefix_clear) || message.author.bot) return;
 	
     if (message.content.startsWith(prefix_clear + "clear")) {
@@ -144,7 +153,11 @@ client.on('message', async message => {
     
       });
         
-	}	
+	}
+		}
+catch (err){
+    catchErr(err, message)
+}
 });
 
 /*const prefix_team = "!!";
