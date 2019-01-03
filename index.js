@@ -116,6 +116,8 @@ client.on('message', async message => {
 	if (message.content.startsWith(prefix_say + "say")) {
 	
      await message.delete().catch(O_o=>{});
+    var args = message.content.split(" ");
+    console.log(args);
     message.channel.send(message.content.slice(5));
 	}	
 });
