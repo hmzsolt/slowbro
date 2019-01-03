@@ -309,6 +309,7 @@ client.on('guildMemberAdd', member => {
 `);
 	
 });
+const ms = require("ms");
 const prefix_tempmute = "!!";
 client.on('message', async message => {
 
