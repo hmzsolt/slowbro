@@ -317,7 +317,7 @@ if (!message.content.startsWith(prefix_tempmute) || message.author.bot) return;
 if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No can do.");
 
 if (message.content.startsWith(prefix_tempmute + "tempmute")){
-
+  var args = message.content.split(" ");
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
   if(!tomute) return message.reply("Couldn't find user.");
   if(tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("Can't mute them!");
