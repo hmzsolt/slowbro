@@ -344,7 +344,7 @@ if (message.content.startsWith(prefix_tempmute + "tempmute")){
     }
   }
   //end of create role
-  let mutetime = args[1];
+  let mutetime = args[2];
   if(!mutetime) return message.reply("You didn't specify a time!");
 
   message.delete().catch(O_o=>{});
