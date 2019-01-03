@@ -120,7 +120,7 @@ client.on('message', async message => {
 	}	
 });
 
-const prefix_clear = "!!";
+/*const prefix_clear = "!!";
 client.on('message', async message => {
     
 	try {
@@ -141,7 +141,7 @@ client.on('message', async message => {
 catch (err){
     catchErr(err, message)
 }
-});
+});*/
 
 /*const prefix_team = "!!";
 client.on('message', async message => {
