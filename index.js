@@ -309,7 +309,7 @@ client.on('guildMemberAdd', member => {
 `);
 	
 });
-/*const ms = require("ms");
+
 const prefix_tempmute = "!!";
 client.on('message', async message => {
 
@@ -374,12 +374,12 @@ if (message.content.startsWith(prefix_tempmute + "tempmute")){
   setTimeout(function(){
     tomute.removeRole(muterole.id);
     message.channel.send(`<@${tomute.id}> has been unmuted!`);
-  }, ms(mutetime));
+  }, (mutetime));
 
 
 //end of module
 }
-});*/
+});
 
 client.login(process.env.token);
 
