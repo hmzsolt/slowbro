@@ -357,7 +357,7 @@ if (message.content.startsWith(prefix_tempmute + "tempmute")){
 
   let muteembed = new Discord.RichEmbed()
   .setDescription(`Mute executed by ${message.author}`)
-  .setColor(orange)
+  .setColor(#ffa500)
   .addField("Muted User", tomute)
   .addField("Muted in", message.channel)
   .addField("Time", message.createdAt)
