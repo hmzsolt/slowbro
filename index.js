@@ -72,6 +72,36 @@ client.on('message', (message) => {
 		
 });
 
+client.on('message', (message) => {
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
+   
+    if (message.content.startsWith(prefix + "raid")) {
+      var args = message.content.split(" ");
+      console.log(args);
+
+      let raidembed = new Discord.RichEmbed()
+      .setDescription(`Raid jelentő: ${message.author}`)
+      .setColor(0xdd9323)
+      .addField("Gym neve: ", args[1])
+      .addField("Reccsenés időpontja: ", args[2])
+      .addField("Tier / Boss: ", args[3]);
+      //.addField("Length", mutetime)
+      //.addField("Reason", reason);
+
+      message.delete(1).catch();
+      message.channel.send(`Trainerek figyelem! @everyone @here !`);
+      message.channel.send(raidembed).then(function (message) {
+      message.react(jelentkezem);
+      //message.react(nemjelentkezem);
+      message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** 0 fő. ***`);	    
+      
+             
+              }).catch(function() {
+                //Something
+               });
+    }
+  });
+
 client.on('messageReactionAdd', (reaction, user) => {
     
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
