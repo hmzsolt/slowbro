@@ -47,7 +47,7 @@ client.on('message', (message) => {
  
   if (message.content.startsWith(prefix + "red")) {
     message.delete(1).catch();
-    message.channel.send(`Trainerek figyelem! @everyone @here \n ${message.content.slice(5)}`).then(function (message) {
+    message.channel.send(`Trainerek figyelem! @everyone @here ${message.author} jelenti: \n ${message.content.slice(5)}`).then(function (message) {
     message.react(jelentkezem);
     //message.react(nemjelentkezem);
     message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** 0 fő. ***`);	    
@@ -72,12 +72,13 @@ client.on('message', (message) => {
       .addField("Reccsenés időpontja: ", args[2])
       .addField("Tier / Boss: ", args[3]);
       
+      const channel_red = client.channels.get('458620540555493376'); //red🔴
       message.delete(1).catch();
-      message.channel.send(`Trainerek figyelem! @everyone @here !`);
-      message.channel.send(raidembed).then(function (message) {
+      channel_red.send(`Trainerek figyelem! @everyone @here !`);
+      channel_red.send(raidembed).then(function (message) {
       message.react(jelentkezem);
       //message.react(nemjelentkezem);
-      message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** 0 fő. ***`);	    
+      channel_red.send(`Az aktuális Raid-re jelentkezők száma : *** 0 fő. ***`);	    
       
              
               }).catch(function() {
