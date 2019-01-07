@@ -128,9 +128,10 @@ client.on('messageReactionRemove', (reaction, user) => {
 client.on('message', async message => {
     
     if (!message.content.startsWith(prefix) || message.author.bot) return;
-    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Nincs hozzá jogosultságod.");
+    
 	
 	if (message.content.startsWith(prefix + "say")) {
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Nincs hozzá jogosultságod.");
 	
      await message.delete().catch(O_o=>{});
     var args = message.content.split(" ");
@@ -222,9 +223,10 @@ client.on('message', async message => {
 
 if (!message.content.startsWith(prefix) || message.author.bot) return;    
 
-if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Nincs hozzá jogosultságod.");
+
 
 if (message.content.startsWith(prefix + "tempmute")){
+  if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Nincs hozzá jogosultságod.");
   var args = message.content.split(" ");
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
   if(!tomute) return message.reply("Nincs ilyen felhasználó.");
