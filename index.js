@@ -135,7 +135,9 @@ client.on('message', async message => {
 	
      await message.delete().catch(O_o=>{});
     var args = message.content.split(" ");
+    const channel_say = args[1];
     console.log(args);
+    console.log(channel_say);
     message.channel.send(message.content.slice(5));
 	}	
 });
