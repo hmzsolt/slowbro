@@ -135,9 +135,9 @@ client.on('message', async message => {
 	
      await message.delete().catch(O_o=>{});
     var args = message.content.split(" ");
-    const channel_say = args[1];
+    
     console.log(args);
-    console.log(channel_say);
+    if(args[1] === '<#514574722495676417>') { channel_sayy === '514574722495676417'; }
     message.channel.send(message.content.slice(5));
 		channel_say.send(message.content.slice(5));
 	}	
