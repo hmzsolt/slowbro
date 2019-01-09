@@ -139,6 +139,7 @@ client.on('message', async message => {
     console.log(args);
     console.log(channel_say);
     message.channel.send(message.content.slice(5));
+		channel_say.send(message.content.slice(5));
 	}	
 });
 
