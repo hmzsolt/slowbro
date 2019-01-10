@@ -139,7 +139,8 @@ client.on('messageReactionRemove', (reaction, user) => {
 });	
 
 client.on('message', async message => {
-    
+    const channel_reports = client.channels.get('519233402055163905'); //reports
+	
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     
 	
@@ -175,8 +176,10 @@ client.on('message', async message => {
     else if(args[1] === '<#458620489540304929>') { //chat
         const channel_say =client.channels.get('458620489540304929'); 
         channel_say.send(message.content.slice(5+args[1].length));
+	    channel_reports.send(`${message.author}: "message.content.slice(5+args[1].length)"`);
     }
     else message.channel.send(message.content.slice(5));
+		channel_reports.send(`${message.author}: "message.content.slice(5)" `);
 }        	
 });
 
