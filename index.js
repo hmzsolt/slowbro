@@ -137,6 +137,7 @@ client.on('message', async message => {
     var args = message.content.split(" ");
     
     console.log(args);
+		console.log(args[1].length);
 		
     if(args[1] === '<#514574722495676417>') { const channel_say =client.channels.get('514574722495676417'); 
     message.channel.send(message.content.slice(5));
