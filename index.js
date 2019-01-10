@@ -13,7 +13,20 @@ function catchErr (err, message) {
 }
 
 client.on('ready', () => {
-client.user.setActivity("b0t")
+
+  let statuses = [
+    `Pokemon Go`,
+    `b0t`,
+    `!help`,
+    `${bot.guilds.size}`
+  ];
+
+  setInterval(function() {
+    let status = statuses[Math.floor(Math.random()*statuses.length)];
+    client.user.setActivity(status);
+  }, 5000);
+
+
   console.log(`Logged in as ${client.user.tag} on ${client.guilds.size} server(s)!`);
 	console.log(`ID: ${client.user.id}`);
    
