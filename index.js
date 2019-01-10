@@ -145,9 +145,10 @@ client.on('message', async message => {
     
 	
 	if (message.content.startsWith(prefix + "say")) {
-    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Nincs hozzá jogosultságod.");
+    
 	
      await message.delete().catch(O_o=>{});
+	if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Nincs hozzá jogosultságod.").then(m => m.delete(60000));
     var args = message.content.split(" ");
     
     console.log(args);
