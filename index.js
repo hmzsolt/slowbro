@@ -179,7 +179,7 @@ client.on('message', async message => {
 	    channel_reports.send(`${message.author}: ${message.content.slice(5+args[1].length)}`);
     }
     else message.channel.send(message.content.slice(5));
-		channel_reports.send(`${message.author}: ${message.content.slice(5)} `);
+	channel_reports.send(`${message.author} a ${message.channel} szobából a következőt mondja: ${message.content.slice(5)} `);
 }        	
 });
 
