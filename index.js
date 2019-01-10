@@ -18,7 +18,7 @@ client.on('ready', () => {
     `Pokemon Go`,
     `b0t`,
     `!help`,
-    `${guild.users.size} fő`
+    `${client.users.size} fő`
   ];
 
   setInterval(function() {
