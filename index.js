@@ -17,8 +17,9 @@ client.on('ready', () => {
   let statuses = [
     `Pokemon Go`,
     `b0t`,
-    `!help`,
-    `${client.users.size} fő`
+    ``,
+    `Tagok: ${client.users.size} fő`,
+    `Szerver: Slowbrok Kaposvár`
   ];
 
   setInterval(function() {
