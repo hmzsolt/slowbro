@@ -17,7 +17,6 @@ client.on('ready', () => {
   let statuses = [
     `Pokemon Go`,
     `b0t`,
-    ``,
     `Tagok: ${client.users.size} fő`,
     `Szerver: Slowbrok Kaposvár`
   ];
