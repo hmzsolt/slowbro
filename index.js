@@ -143,7 +143,7 @@ client.on('messageDelete', message => {
   const channel_reports = client.channels.get('519233402055163905'); //reports
   if(message.author.bot) return;
   channel_reports.send(`${message.member.user.username} üzenete:\n***${message.cleanContent}*** \ntörölve lett a(z) ${message.channel} szobából.`);
-  console.log(message.delete.user.username);	
+  //console.log(message.delete.user.username);	
 });
 
 client.on('message', async message => {
