@@ -148,17 +148,18 @@ client.on('messageReactionRemove', (reaction, user) => {
 });*/
 
 client.on("messageDelete", async msg => {
+  if(message.author.bot) return;
   let logs = await msg.guild.fetchAuditLogs({type: 72});
   let entry = logs.entries.first();
 
   let embed = new Discord.RichEmbed()
-    .setTitle("**DELETED MESSAGE**")
+    .setTitle("**TÖRÖLT ÜZENET**")
     .setColor("#fc3c3c")
-    .addField("Author", msg.author.tag, true)
-    .addField("Channel", msg.channel, true)
-    .addField("Message", msg.content)
-    .addField("Executor", entry.executor)
-    .addField("Reason", entry.reason || "Unspecified")
+    .addField("Szerző", msg.author.tag, true)
+    .addField("Csatorna", msg.channel, true)
+    .addField("Üzenet", msg.content)
+    .addField("Végrehajtó", entry.executor)
+    //.addField("Reason", entry.reason || "Unspecified")
     .setFooter(`Message ID: ${msg.id} | Author ID: ${msg.author.id}`);
 
     const channel_reports = client.channels.get('519233402055163905');
