@@ -360,7 +360,7 @@ client.on('message', async message => {
       console.log(args);
       console.log(args[1]);
      
-      if (args[1].size < 1) return message.channel.send(`Nem adtál meg Tier Bosst.`);
+      if (args[1].length < 1) return message.channel.send(`Nem adtál meg Tier Bosst.`);
       
       message.channel.send(`https://www.pokebattler.com/raids/defenders/${args[1].toUpperCase()}/levels/RAID_LEVEL_5/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?sort=OVERALL&weatherCondition=NO_WEATHER&dodgeStrategy=DODGE_REACTION_TIME&aggregation=AVERAGE&randomAssistants=-1`);
      
