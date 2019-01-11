@@ -361,8 +361,10 @@ client.on('message', async message => {
       var args = message.content.split(" ");
       console.log(args);
       console.log(args[1]);
+
+      const tboss = args[1].toUpperCase;
     
-      message.channel.send(`https://www.pokebattler.com/raids/defenders/${args[1]}/levels/RAID_LEVEL_5/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?sort=OVERALL&weatherCondition=NO_WEATHER&dodgeStrategy=DODGE_REACTION_TIME&aggregation=AVERAGE`);
+      message.channel.send(`https://www.pokebattler.com/raids/defenders/${tboss}/levels/RAID_LEVEL_5/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?sort=OVERALL&weatherCondition=NO_WEATHER&dodgeStrategy=DODGE_REACTION_TIME&aggregation=AVERAGE`);
     
     }catch
     {
