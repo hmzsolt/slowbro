@@ -157,40 +157,40 @@ client.on('message', async message => {
     if(args[1] === '<#514574722495676417>') { //silph 
         const channel_say =client.channels.get('514574722495676417'); 
       channel_say.send(message.content.slice(5+args[1].length));
-      channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt mondja: ${message.content.slice(5+args[1].length)}`);
+      channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt küldi a ${channel_say} szobába: ${message.content.slice(5+args[1].length)}`);
     }
     else if(args[1] === '<#504535266069970945>') { //ekuki
         const channel_say =client.channels.get('504535266069970945'); 
       channel_say.send(message.content.slice(5+args[1].length));
-      channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt mondja: ${message.content.slice(5+args[1].length)}`);
+      channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt küldi a ${channel_say} szobába: ${message.content.slice(5+args[1].length)}`);
     }
     else if(args[1] === '<#459575823805054976>') { //barát
         const channel_say =client.channels.get('459575823805054976'); 
       channel_say.send(message.content.slice(5+args[1].length));
-      channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt mondja: ${message.content.slice(5+args[1].length)}`); 
+      channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt küldi a ${channel_say} szobába: ${message.content.slice(5+args[1].length)}`); 
     }
     else if(args[1] === '<#458620540555493376>') { //red
         const channel_say =client.channels.get('458620540555493376'); 
         channel_say.send(message.content.slice(5+args[1].length));
-        channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt mondja: ${message.content.slice(5+args[1].length)}`);
+        channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt küldi a ${channel_say} szobába: ${message.content.slice(5+args[1].length)}`);
     }
     else if(args[1] === '<#474077389186400276>') { //hirek
         const channel_say =client.channels.get('474077389186400276'); 
         channel_say.send(message.content.slice(5+args[1].length));
-        channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt mondja: ${message.content.slice(5+args[1].length)}`);
+        channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt küldi a ${channel_say} szobába: ${message.content.slice(5+args[1].length)}`);
     }
     else if(args[1] === '<#458620489540304929>') { //chat
         const channel_say =client.channels.get('458620489540304929'); 
         channel_say.send(message.content.slice(5+args[1].length));
-	      channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt mondja: ${message.content.slice(5+args[1].length)}`);
+	      channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt küldi a ${channel_say} szobába: ${message.content.slice(5+args[1].length)}`);
     }
     else if(args[1] === '<#458625848572903435>') { //biznisz
       const channel_say =client.channels.get('458625848572903435'); 
       channel_say.send(message.content.slice(5+args[1].length));
-      channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt mondja: ${message.content.slice(5+args[1].length)}`);
+      channel_reports.send(`${message.author}: a ${message.channel} szobából a következőt küldi a ${channel_say} szobába: ${message.content.slice(5+args[1].length)}`);
     }
     else message.channel.send(message.content.slice(5));
-		     channel_reports.send(`${message.author} a ${message.channel} szobából a következőt mondja: ${message.content.slice(5)} `);
+		     channel_reports.send(`${message.author} a ${message.channel} szobában a következőt mondja: ${message.content.slice(5)} `);
 }        	
 });
 
