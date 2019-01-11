@@ -140,11 +140,29 @@ client.on('messageReactionRemove', (reaction, user) => {
     }
 });	
 
-client.on('messageDelete', message => {
+/*client.on('messageDelete', message => {
   const channel_reports = client.channels.get('519233402055163905'); //reports
   if(message.author.bot) return;
   channel_reports.send(`${message.member.user.username} üzenete:\n***${message.cleanContent}*** \ntörölve lett a(z) ${message.channel} szobából.`);
   //console.log(message.delete.user.username);	
+});*/
+
+client.on("messageDelete", async msg => {
+  let logs = await msg.guild.fetchAuditLogs({type: 72});
+  let entry = logs.entries.first();
+
+  let embed = new Discord.RichEmbed()
+    .setTitle("**DELETED MESSAGE**")
+    .setColor("#fc3c3c")
+    .addField("Author", msg.author.tag, true)
+    .addField("Channel", msg.channel, true)
+    .addField("Message", msg.content)
+    .addField("Executor", entry.executor)
+    .addField("Reason", entry.reason || "Unspecified")
+    .setFooter(`Message ID: ${msg.id} | Author ID: ${msg.author.id}`);
+
+    const channel_reports = client.channels.get('519233402055163905');
+  channel_reports.send(embed);
 });
 
 client.on('message', async message => {
