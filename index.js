@@ -77,6 +77,7 @@ client.on('message', (message) => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
    
     if (message.content.startsWith(prefix + "raid")) {
+	    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Nincs hozzá jogosultságod.").then(m => m.delete(60000));
       var args = message.content.split(" ");
       console.log(args);
 
