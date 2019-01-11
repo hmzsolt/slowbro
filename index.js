@@ -139,6 +139,11 @@ client.on('messageReactionRemove', (reaction, user) => {
     }
 });	
 
+client.on('messageDelete', message => {
+  const channel_reports = client.channels.get('519233402055163905'); //reports
+  channel_reports.send(`${message.cleanContent} törölve lett a(z) ${message.channel} szobából.`);
+});
+
 client.on('message', async message => {
     const channel_reports = client.channels.get('519233402055163905'); //reports
 	
