@@ -148,7 +148,7 @@ client.on('messageReactionRemove', (reaction, user) => {
 });*/
 
 client.on("messageDelete", async msg => {
-  if(message.author.bot) return;
+  if(msg.author.bot) return;
   let logs = await msg.guild.fetchAuditLogs({type: 72});
   let entry = logs.entries.first();
 
