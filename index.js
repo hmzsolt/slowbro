@@ -350,7 +350,7 @@ if (message.content.startsWith(prefix + "tempmute")){
 });
 
 client.on('message', async message => {
-const snekfetch = require(snekfetch);
+//const snekfetch = require(snekfetch);
   if (!message.content.startsWith(prefix) || message.author.bot) return;    
     
   if (message.content.startsWith(prefix + "counters")){
@@ -366,7 +366,7 @@ const snekfetch = require(snekfetch);
       const api = "https://www.pokebattler.com/raids/defenders/" + boss.toUpperCase() + "/levels/RAID_LEVEL_5/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?sort=OVERALL&weatherCondition=NO_WEATHER&dodgeStrategy=DODGE_REACTION_TIME&aggregation=AVERAGE&randomAssistants=-1";
       //message.channel.send(`https://www.pokebattler.com/raids/defenders/${boss.toUpperCase()}/levels/RAID_LEVEL_5/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?sort=OVERALL&weatherCondition=NO_WEATHER&dodgeStrategy=DODGE_REACTION_TIME&aggregation=AVERAGE&randomAssistants=-1`);
     
-      snekfetch.get(api).then(console.log);
+      console.log(api);
     
     }
   });
