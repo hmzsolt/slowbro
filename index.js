@@ -363,7 +363,7 @@ client.on('message', async message => {
       console.log(boss);
       
       if (boss.length < 1) return message.channel.send(`Nem adtál meg Tier Boss-t.`).then(m => m.delete(60000));
-      const api = "https://www.pokebattler.com/raids/defenders/" + boss.toUpperCase() + "/levels/RAID_LEVEL_5/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?sort=OVERALL&weatherCondition=NO_WEATHER&dodgeStrategy=DODGE_REACTION_TIME&aggregation=AVERAGE&randomAssistants=-1";
+      const api = "https://fight.pokebattler.com/raids/defenders/" + boss.toUpperCase() + "/levels/RAID_LEVEL_5/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?sort=OVERALL&weatherCondition=NO_WEATHER&dodgeStrategy=DODGE_REACTION_TIME&aggregation=AVERAGE&randomAssistants=-1";
       //message.channel.send(`https://www.pokebattler.com/raids/defenders/${boss.toUpperCase()}/levels/RAID_LEVEL_5/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?sort=OVERALL&weatherCondition=NO_WEATHER&dodgeStrategy=DODGE_REACTION_TIME&aggregation=AVERAGE&randomAssistants=-1`);
     
       console.log(api);
