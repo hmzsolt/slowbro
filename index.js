@@ -366,7 +366,7 @@ client.on('message', async message => {
       const api = "https://fight.pokebattler.com/raids/defenders/" + boss.toUpperCase() + "/levels/RAID_LEVEL_5/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?sort=OVERALL&weatherCondition=NO_WEATHER&dodgeStrategy=DODGE_REACTION_TIME&aggregation=AVERAGE&randomAssistants=-1";
       //message.channel.send(`https://www.pokebattler.com/raids/defenders/${boss.toUpperCase()}/levels/RAID_LEVEL_5/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?sort=OVERALL&weatherCondition=NO_WEATHER&dodgeStrategy=DODGE_REACTION_TIME&aggregation=AVERAGE&randomAssistants=-1`);
     
-      get(api).then(console.log);
+      console.log(api);
     
     }
   });
