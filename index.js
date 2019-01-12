@@ -151,7 +151,8 @@ client.on("messageDelete", async msg => {
   if(msg.author.bot) return;
   let logs = await msg.guild.fetchAuditLogs({type: 72});
   let entry = logs.entries.first();
-
+	console.log(logs);
+	console.log(entry);
   let embed = new Discord.RichEmbed()
     .setTitle("**TÖRÖLT ÜZENET**")
     .setColor("#fc3c3c")
