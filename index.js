@@ -179,17 +179,7 @@ client.on('message', async message => {
     
     console.log(args);
     console.log(args[1].length);
-    
-    let botembed = new Discord.RichEmbed()
-    .setTitle("**BOT ÜZENET**")
-    .setColor("0xdd9323")
-    .addField("Szerző", message.author.tag, true)
-    .addField("Csatorna", message.channel, true)
-    .addField("Üzenet", message.content.slice(5+args[1].length))
-    .addField("Cél Csatorna", channel_say)
-    //.addField("Reason", entry.reason || "Unspecified")
-    .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);
-		
+        		
     if(args[1] === '<#514574722495676417>') { //silph 
         const channel_say =client.channels.get('514574722495676417'); 
       channel_say.send(message.content.slice(5+args[1].length));
@@ -227,7 +217,16 @@ client.on('message', async message => {
     }
     else message.channel.send(message.content.slice(5));
 	//channel_reports.send(`${message.author} a ${message.channel} szobában a következőt mondja: ${message.content.slice(5)} `);
-}        	
+}  
+	let botembed = new Discord.RichEmbed()
+    .setTitle("**BOT ÜZENET**")
+    .setColor("0xdd9323")
+    .addField("Szerző", message.author.tag, true)
+    .addField("Csatorna", message.channel, true)
+    .addField("Üzenet", message.content.slice(5+args[1].length))
+    .addField("Cél Csatorna", channel_say)
+    //.addField("Reason", entry.reason || "Unspecified")
+    .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);
 });
 
 const prefix_team = "!!";
