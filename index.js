@@ -169,6 +169,17 @@ client.on("messageDelete", async msg => {
 client.on('message', async message => {
     const channel_reports = client.channels.get('519233402055163905'); //reports
     
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
+    	
+	if (message.content.startsWith(prefix + "say")) {
+    	
+     await message.delete().catch(O_o=>{});
+     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Nincs hozzá jogosultságod.").then(m => m.delete(60000));
+    var args = message.content.split(" ");
+    
+    console.log(args);
+    console.log(args[1].length);
+    
     let botembed = new Discord.RichEmbed()
     .setTitle("**BOT ÜZENET**")
     .setColor("0xdd9323")
@@ -178,19 +189,6 @@ client.on('message', async message => {
     .addField("Cél Csatorna", channel_say)
     //.addField("Reason", entry.reason || "Unspecified")
     .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);
-
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
-    
-	
-	if (message.content.startsWith(prefix + "say")) {
-    
-	
-     await message.delete().catch(O_o=>{});
-     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Nincs hozzá jogosultságod.").then(m => m.delete(60000));
-    var args = message.content.split(" ");
-    
-    console.log(args);
-		console.log(args[1].length);
 		
     if(args[1] === '<#514574722495676417>') { //silph 
         const channel_say =client.channels.get('514574722495676417'); 
