@@ -41,8 +41,8 @@ client.on('message', async msg => {
 	"Jogosulatlan előnyszerzés miatt transferelned kell.",
 	"Ugye ezt nem gondoltad komolyan?!",
 	"2 perced van felhúzni lvl 40-ig, vagy transferelned kell!",
-        "Ezt most megtarthatod...",
-        "Ez ugye csak valami rossz vicc akart lenni?",
+  "Ezt most megtarthatod...",
+  "Ez ugye csak valami rossz vicc akart lenni?",
 	"Jó kis poké, nagyon szeretem!",
 	"Csűrtél rá egy grétikét? "
 ];
@@ -181,49 +181,102 @@ client.on('message', async message => {
     console.log(args);
     console.log(args[1].length);
     
-    let botembed = new Discord.RichEmbed()
+    if(args[1] === '<#514574722495676417>') { //silph 
+        const channel_say =client.channels.get('514574722495676417'); 
+      channel_say.send(message.content.slice(5+args[1].length));
+      let botembed = new Discord.RichEmbed()
     .setTitle("**BOT ÜZENET**")
     .setColor("0xdd9323")
     .addField("Szerző", message.author.tag, true)
     .addField("Csatorna", message.channel, true)
     .addField("Üzenet", message.content.slice(5+args[1].length))
-    //.addField("Cél Csatorna", channel_say)
+    .addField("Cél Csatorna", channel_say)
     //.addField("Reason", entry.reason || "Unspecified")
-    .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);  
-
-    if(args[1] === '<#514574722495676417>') { //silph 
-        const channel_say =client.channels.get('514574722495676417'); 
-      channel_say.send(message.content.slice(5+args[1].length));
+    .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);
       channel_reports.send(botembed);
     }
     else if(args[1] === '<#504535266069970945>') { //ekuki
         const channel_say =client.channels.get('504535266069970945'); 
       channel_say.send(message.content.slice(5+args[1].length));
+      let botembed = new Discord.RichEmbed()
+    .setTitle("**BOT ÜZENET**")
+    .setColor("0xdd9323")
+    .addField("Szerző", message.author.tag, true)
+    .addField("Csatorna", message.channel, true)
+    .addField("Üzenet", message.content.slice(5+args[1].length))
+    .addField("Cél Csatorna", channel_say)
+    //.addField("Reason", entry.reason || "Unspecified")
+    .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);
       channel_reports.send(botembed);
     }
     else if(args[1] === '<#459575823805054976>') { //barát
         const channel_say =client.channels.get('459575823805054976'); 
       channel_say.send(message.content.slice(5+args[1].length));
+      let botembed = new Discord.RichEmbed()
+    .setTitle("**BOT ÜZENET**")
+    .setColor("0xdd9323")
+    .addField("Szerző", message.author.tag, true)
+    .addField("Csatorna", message.channel, true)
+    .addField("Üzenet", message.content.slice(5+args[1].length))
+    .addField("Cél Csatorna", channel_say)
+    //.addField("Reason", entry.reason || "Unspecified")
+    .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);
       channel_reports.send(botembed);
     }
     else if(args[1] === '<#458620540555493376>') { //red
         const channel_say =client.channels.get('458620540555493376'); 
         channel_say.send(message.content.slice(5+args[1].length));
+        let botembed = new Discord.RichEmbed()
+    .setTitle("**BOT ÜZENET**")
+    .setColor("0xdd9323")
+    .addField("Szerző", message.author.tag, true)
+    .addField("Csatorna", message.channel, true)
+    .addField("Üzenet", message.content.slice(5+args[1].length))
+    .addField("Cél Csatorna", channel_say)
+    //.addField("Reason", entry.reason || "Unspecified")
+    .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);
         channel_reports.send(botembed);
     }
     else if(args[1] === '<#474077389186400276>') { //hirek
         const channel_say =client.channels.get('474077389186400276'); 
         channel_say.send(message.content.slice(5+args[1].length));
+        let botembed = new Discord.RichEmbed()
+    .setTitle("**BOT ÜZENET**")
+    .setColor("0xdd9323")
+    .addField("Szerző", message.author.tag, true)
+    .addField("Csatorna", message.channel, true)
+    .addField("Üzenet", message.content.slice(5+args[1].length))
+    .addField("Cél Csatorna", channel_say)
+    //.addField("Reason", entry.reason || "Unspecified")
+    .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);
         channel_reports.send(botembed);
     }
     else if(args[1] === '<#458620489540304929>') { //chat
         const channel_say =client.channels.get('458620489540304929'); 
         channel_say.send(message.content.slice(5+args[1].length));
+        let botembed = new Discord.RichEmbed()
+    .setTitle("**BOT ÜZENET**")
+    .setColor("0xdd9323")
+    .addField("Szerző", message.author.tag, true)
+    .addField("Csatorna", message.channel, true)
+    .addField("Üzenet", message.content.slice(5+args[1].length))
+    .addField("Cél Csatorna", channel_say)
+    //.addField("Reason", entry.reason || "Unspecified")
+    .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);
 	      channel_reports.send(botembed);
     }
     else if(args[1] === '<#458625848572903435>') { //biznisz
       const channel_say =client.channels.get('458625848572903435'); 
       channel_say.send(message.content.slice(5+args[1].length));
+      let botembed = new Discord.RichEmbed()
+    .setTitle("**BOT ÜZENET**")
+    .setColor("0xdd9323")
+    .addField("Szerző", message.author.tag, true)
+    .addField("Csatorna", message.channel, true)
+    .addField("Üzenet", message.content.slice(5+args[1].length))
+    .addField("Cél Csatorna", channel_say)
+    //.addField("Reason", entry.reason || "Unspecified")
+    .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);
       channel_reports.send(botembed);
     }
     else message.channel.send(message.content.slice(5));
