@@ -286,7 +286,7 @@ client.on('message', async message => {
     .setColor("0xdd9323")
     .addField("Szerző", message.author.tag, true)
     .addField("Forrás Csatorna", message.channel, true)
-    .addField("Üzenet", message.content.slice(5+args[1].length))
+    .addField("Üzenet", message.content.slice(5))
     .addField("Cél Csatorna", channel_say)
     //.addField("Reason", entry.reason || "Unspecified")
     .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);
