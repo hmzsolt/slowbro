@@ -188,7 +188,7 @@ client.on('message', async message => {
     .setTitle("**BOT ÜZENET**")
     .setColor("0xdd9323")
     .addField("Szerző", message.author.tag, true)
-    .addField("Csatorna", message.channel, true)
+    .addField("Forrás Csatorna", message.channel, true)
     .addField("Üzenet", message.content.slice(5+args[1].length))
     .addField("Cél Csatorna", channel_say)
     //.addField("Reason", entry.reason || "Unspecified")
@@ -202,7 +202,7 @@ client.on('message', async message => {
     .setTitle("**BOT ÜZENET**")
     .setColor("0xdd9323")
     .addField("Szerző", message.author.tag, true)
-    .addField("Csatorna", message.channel, true)
+    .addField("Forrás Csatorna", message.channel, true)
     .addField("Üzenet", message.content.slice(5+args[1].length))
     .addField("Cél Csatorna", channel_say)
     //.addField("Reason", entry.reason || "Unspecified")
@@ -216,7 +216,7 @@ client.on('message', async message => {
     .setTitle("**BOT ÜZENET**")
     .setColor("0xdd9323")
     .addField("Szerző", message.author.tag, true)
-    .addField("Csatorna", message.channel, true)
+    .addField("Forrás Csatorna", message.channel, true)
     .addField("Üzenet", message.content.slice(5+args[1].length))
     .addField("Cél Csatorna", channel_say)
     //.addField("Reason", entry.reason || "Unspecified")
@@ -230,7 +230,7 @@ client.on('message', async message => {
     .setTitle("**BOT ÜZENET**")
     .setColor("0xdd9323")
     .addField("Szerző", message.author.tag, true)
-    .addField("Csatorna", message.channel, true)
+    .addField("Forrás Csatorna", message.channel, true)
     .addField("Üzenet", message.content.slice(5+args[1].length))
     .addField("Cél Csatorna", channel_say)
     //.addField("Reason", entry.reason || "Unspecified")
@@ -244,7 +244,7 @@ client.on('message', async message => {
     .setTitle("**BOT ÜZENET**")
     .setColor("0xdd9323")
     .addField("Szerző", message.author.tag, true)
-    .addField("Csatorna", message.channel, true)
+    .addField("Forrás Csatorna", message.channel, true)
     .addField("Üzenet", message.content.slice(5+args[1].length))
     .addField("Cél Csatorna", channel_say)
     //.addField("Reason", entry.reason || "Unspecified")
@@ -258,7 +258,7 @@ client.on('message', async message => {
     .setTitle("**BOT ÜZENET**")
     .setColor("0xdd9323")
     .addField("Szerző", message.author.tag, true)
-    .addField("Csatorna", message.channel, true)
+    .addField("Forrás Csatorna", message.channel, true)
     .addField("Üzenet", message.content.slice(5+args[1].length))
     .addField("Cél Csatorna", channel_say)
     //.addField("Reason", entry.reason || "Unspecified")
@@ -272,7 +272,7 @@ client.on('message', async message => {
     .setTitle("**BOT ÜZENET**")
     .setColor("0xdd9323")
     .addField("Szerző", message.author.tag, true)
-    .addField("Csatorna", message.channel, true)
+    .addField("Forrás Csatorna", message.channel, true)
     .addField("Üzenet", message.content.slice(5+args[1].length))
     .addField("Cél Csatorna", channel_say)
     //.addField("Reason", entry.reason || "Unspecified")
@@ -280,7 +280,17 @@ client.on('message', async message => {
       channel_reports.send(botembed);
     }
     else message.channel.send(message.content.slice(5));
-	//channel_reports.send(`${message.author} a ${message.channel} szobában a következőt mondja: ${message.content.slice(5)} `);
+    let channel_say = message.channel;
+    let botembed = new Discord.RichEmbed()
+    .setTitle("**BOT ÜZENET**")
+    .setColor("0xdd9323")
+    .addField("Szerző", message.author.tag, true)
+    .addField("Forrás Csatorna", message.channel, true)
+    .addField("Üzenet", message.content.slice(5+args[1].length))
+    .addField("Cél Csatorna", channel_say)
+    //.addField("Reason", entry.reason || "Unspecified")
+    .setFooter(`Message ID: ${message.id} | Author ID: ${message.author.id}`);
+      channel_reports.send(botembed);
 }  
     	
 });
