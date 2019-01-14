@@ -149,17 +149,17 @@ client.on('messageReactionRemove', (reaction, user) => {
 
 client.on("messageDelete", async msg => {
   if(msg.author.bot) return;
-  let logs = await msg.guild.fetchAuditLogs({type: 72});
-  let entry = logs.entries.first();
-	//console.log(logs);
-	console.log(entry);
+  //let logs = await msg.guild.fetchAuditLogs({type: 72});
+  //let entry = logs.entries.first();
+  //console.log(logs);
+  //console.log(entry);
   let embed = new Discord.RichEmbed()
     .setTitle("**TÖRÖLT ÜZENET**")
     .setColor("#fc3c3c")
     .addField("Szerző", msg.author.tag, true)
     .addField("Csatorna", msg.channel, true)
     .addField("Üzenet", msg.content)
-    .addField("Végrehajtó", entry.executor)
+    //.addField("Végrehajtó", entry.executor)
     //.addField("Reason", entry.reason || "Unspecified")
     .setFooter(`Message ID: ${msg.id} | Author ID: ${msg.author.id}`);
 
@@ -457,7 +457,7 @@ client.on('message', async message => {
       console.log(boss);
       
       if (boss.length < 1) return message.channel.send(`Nem adtál meg Tier Boss-t.`).then(m => m.delete(60000));
-      const api = "https://fight.pokebattler.com/raids/defenders/" + boss.toUpperCase() + "/levels/RAID_LEVEL_5/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?sort=OVERALL&weatherCondition=NO_WEATHER&dodgeStrategy=DODGE_REACTION_TIME&aggregation=AVERAGE&randomAssistants=-1";
+      let api = "https://fight.pokebattler.com/raids/defenders/" + boss.toUpperCase() + "/levels/RAID_LEVEL_5/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?sort=OVERALL&weatherCondition=NO_WEATHER&dodgeStrategy=DODGE_REACTION_TIME&aggregation=AVERAGE&randomAssistants=-1";
       //message.channel.send(`https://www.pokebattler.com/raids/defenders/${boss.toUpperCase()}/levels/RAID_LEVEL_5/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?sort=OVERALL&weatherCondition=NO_WEATHER&dodgeStrategy=DODGE_REACTION_TIME&aggregation=AVERAGE&randomAssistants=-1`);
     
       console.log(api);
