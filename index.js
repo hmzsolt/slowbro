@@ -57,6 +57,33 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
   }
 });
 
+client.on('message', async message => {
+  const channel_reports = client.channels.get('519233402055163905'); //reports
+  let prefix_dm = ".";
+  if(!message.content.startsWith(prefix_dm)) return;  
+  if(message.author.bot) return;
+  if(!message.channel.type === "dm") return;
+
+  if (message.content.startsWith(prefix_dm + "raid")) {
+    message.author.send(`Melyik GYM-en lesz raid?`).then(() => {
+        message.channel.awaitMessages(response => response.content,  {
+            max: 1, // number of responses to collect
+            time: 10000, //time that bot waits for answer in ms
+            errors: ['time'],
+        })
+            .then((collected) => {
+                var pollRes = collected.first().content; //this is the first response collected
+                channel_reports.send('You said ' + pollRes);
+                // Do something else here (save response in database)
+            })
+            .catch(() => { // if no message is collected
+                message.channel.send('I didnt catch that, Try again.');
+            });
+        });
+};
+
+});
+
 client.on('message', (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
