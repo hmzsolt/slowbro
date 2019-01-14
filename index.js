@@ -72,8 +72,8 @@ client.on('message', async message => {
             errors: ['time'],
         })
             .then((collected) => {
-                var pollRes = collected.first().content; //this is the first response collected
-                channel_reports.send('You said ' + pollRes);
+                var gym = collected.first().content; //this is the first response collected
+                //channel_reports.send('You said ' + pollRes);
                 // Do something else here (save response in database)
             }).then(() => {
                 message.author.send(`Mikor reccsen a tojás?`).then(() => {
@@ -84,7 +84,7 @@ client.on('message', async message => {
                 })
                 .then((collected) => {
                     var time = collected.first().content; //this is the first response collected
-                    channel_reports.send('You said ' + time);
+                    channel_reports.send('You said ' + gym + time);
                     // Do something else here (save response in database)
                 })    
             })
