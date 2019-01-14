@@ -80,7 +80,7 @@ client.on('message', async message => {
                 message.channel.send('I didnt catch that, Try again.');
             });
         });
-} else if(gym.length > 1){
+} if(gym.length > 1){
     message.author.send(`Mikor reccsen a tojás`).then(() => {
         message.channel.awaitMessages(response => response.content,  {
             max: 1, // number of responses to collect
