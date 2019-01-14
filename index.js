@@ -70,32 +70,32 @@ client.on('message', async message => {
             max: 1, // number of responses to collect
             time: 60000, //time that bot waits for answer in ms
             errors: ['time'],
-        }).then((collected) => {
-            var gym = collected.first().content; //this is the first response collected
-            channel_reports.send('You said ' + gym);
-            if (gym > 0) {
-                message.author.send(`Mikor reccsen a tojás`).then(() => {
-                    message.channel.awaitMessages(response => response.content,  {
-                        max: 1, // number of responses to collect
-                        time: 60000, //time that bot waits for answer in ms
-                        errors: ['time'],
-                    }).then((collected) => {
-                        var time = collected.first().content; //this is the first response collected
-                        channel_reports.send('You said ' + time);
-            if (time > 0) {    
-                message.author.send(`Tier?`).then(() => {
-                    message.channel.awaitMessages(response => response.content,  {
-                        max: 1, // number of responses to collect
-                        time: 60000, //time that bot waits for answer in ms
-                        errors: ['time'],
-                    }).then((collected) => {
-                        var tier = collected.first().content; //this is the first response collected
-                        channel_reports.send('You said ' + tier);
-                                // Do something else here (save response in database)
-                            })
-                            .catch(() => { // if no message is collected
-                                message.channel.send('I didnt catch that, Try again.');
-                            })})}})})}})})}});
+        })
+            .then((collected) => {
+                var pollRes = collected.first().content; //this is the first response collected
+                channel_reports.send('You said ' + pollRes);
+                // Do something else here (save response in database)
+            }).then(() => {
+                message.author.send(`Mikor reccsen a tojás?`).then(() => {
+                message.channel.awaitMessages(response => response.content,  {
+                    max: 1, // number of responses to collect
+                    time: 60000, //time that bot waits for answer in ms
+                    errors: ['time'],
+                })
+                .then((collected) => {
+                    var time = collected.first().content; //this is the first response collected
+                    channel_reports.send('You said ' + time);
+                    // Do something else here (save response in database)
+                })    
+            })
+            .catch(() => { // if no message is collected
+                message.channel.send('Próbáld újra!');
+            });
+        });
+    });
+};
+
+});
 
 client.on('message', (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
