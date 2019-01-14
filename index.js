@@ -75,6 +75,7 @@ client.on('message', async message => {
             channel_reports.send('You said ' + gym);
             // Do something else here (save response in database)
         })
+        if (gym > 0) {
         message.author.send(`Mikor reccsen a tojás`).then(() => {
             message.channel.awaitMessages(response => response.content,  {
                 max: 1, // number of responses to collect
@@ -85,6 +86,7 @@ client.on('message', async message => {
                 channel_reports.send('You said ' + time);
                 // Do something else here (save response in database)
             })
+        if (time > 0) {    
             message.author.send(`Tier?`).then(() => {
         message.channel.awaitMessages(response => response.content,  {
             max: 1, // number of responses to collect
@@ -99,11 +101,12 @@ client.on('message', async message => {
             .catch(() => { // if no message is collected
                 message.channel.send('I didnt catch that, Try again.');
             });
-        })})
-        });
+        })}})
+        }});
 };
-    
+ 
 });
+
 client.on('message', (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
