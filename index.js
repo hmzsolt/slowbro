@@ -295,11 +295,10 @@ client.on('message', async message => {
     	
 });
 
-const prefix_team = "!!";
 client.on('message', async message => {
-  if (!message.content.startsWith(prefix_team) || message.author.bot) return;
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
  
-  if (message.content.startsWith(prefix_team + "team") && message.channel.id === '458617725770661898'){
+  if (message.content.startsWith(prefix + "team") && message.channel.id === '458617725770661898'){
   		message.delete(10);
 	  var args = message.content.split(" ");
 		console.log(args);
@@ -348,11 +347,11 @@ client.on('guildMemberAdd', member => {
     member.send(`
     Helló ${member} ! Üdv a Slowbrok szerveren.
     \nElső lépések:\n
-    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : ***!!team*** majd a csapatod nevét\n
+    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : ***!team*** majd a csapatod nevét\n
 	pl.:\n 
-        !!team valor \n 
-        !!team mystic \n 
-        !!team instinct
+        !team valor \n 
+        !team mystic \n 
+        !team instinct
     
     -   Ne felejtsd el elolvasni a ${szabalyzat} -ot !
 `);
@@ -362,11 +361,11 @@ client.on('guildMemberAdd', member => {
 	member.guild.channels.get('458618198212739083').send(`
     Helló ${member} ! Üdv a Slowbrok szerveren.
     \nElső lépések:\n
-    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : ***!!team*** majd a csapatod nevét\n
+    -   A ${welcome} szobában válaszd ki a csapatodat. Ezt úgy tudod megtenni, hogy beírod : ***!team*** majd a csapatod nevét\n
 	pl.:\n 
-        !!team valor \n 
-        !!team mystic \n 
-        !!team instinct
+        !team valor \n 
+        !team mystic \n 
+        !team instinct
     
     -   Ne felejtsd el elolvasni a ${szabalyzat} -ot !
 `);
