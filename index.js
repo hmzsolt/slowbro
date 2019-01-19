@@ -65,7 +65,7 @@ client.on('message', (message) => {
     message.channel.send(`Trainerek figyelem! @everyone @here ${message.author} jelenti: \n ${message.content.slice(5)}`).then(function (message) {
     message.react(jelentkezem);
     //message.react(nemjelentkezem);
-    message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** 0 fő. ***`);	    
+    //message.channel.send(`Az aktuális Raid-re jelentkezők száma : *** 0 fő. ***`);	    
     }).catch(function() {
               //Something
     });
@@ -94,7 +94,7 @@ client.on('message', (message) => {
       channel_red.send(raidembed).then(function (message) {
       message.react(jelentkezem);
       //message.react(nemjelentkezem);
-      channel_red.send(`Az aktuális Raid-re jelentkezők száma : *** 0 fő. ***`);	    
+      //channel_red.send(`Az aktuális Raid-re jelentkezők száma : *** 0 fő. ***`);	    
       
              
               }).catch(function() {
@@ -103,7 +103,7 @@ client.on('message', (message) => {
     }
   });
 
-client.on('messageReactionAdd', (reaction, user) => {
+/*client.on('messageReactionAdd', (reaction, user) => {
     const channel_reports = client.channels.get('519233402055163905'); //reports
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	var  jelentkezok = reaction.count-1;
@@ -138,7 +138,7 @@ client.on('messageReactionRemove', (reaction, user) => {
         if (msg) msg.delete().catch(O_o=>{});
       });
     }
-});	
+});	*/
 
 /*client.on('messageDelete', message => {
   const channel_reports = client.channels.get('519233402055163905'); //reports
