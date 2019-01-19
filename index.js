@@ -103,7 +103,7 @@ client.on('message', (message) => {
     }
   });
 
-/*client.on('messageReactionAdd', (reaction, user) => {
+client.on('messageReactionAdd', (reaction, user) => {
     const channel_reports = client.channels.get('519233402055163905'); //reports
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	var  jelentkezok = reaction.count-1;
@@ -111,14 +111,14 @@ client.on('message', (message) => {
     console.log(`${user.username} reacted with "${reaction.emoji.name}". Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
     channel_reports.send(`${user.username} reacted with "${reaction.emoji.name}". Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
 	    
-    const channel = client.channels.find(channel => channel.name === 'red🔴'); // red🔴
+    //const channel = client.channels.find(channel => channel.name === 'red🔴'); // red🔴
         
     //channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
     
-    channel.fetchMessage(client.user.lastMessage).then(async msg => {
+    /*channel.fetchMessage(client.user.lastMessage).then(async msg => {
         await channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
         if (msg) msg.delete().catch(O_o=>{});
-      });
+      });*/
     }
 });	
 
@@ -129,16 +129,16 @@ client.on('messageReactionRemove', (reaction, user) => {
     
     console.log(`${user.username} unreacted with "${reaction.emoji.name}". Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
     channel_reports.send(`${user.username} reacted with "${reaction.emoji.name}". Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
-    const channel = client.channels.find(channel => channel.name === 'red🔴');
+    //const channel = client.channels.find(channel => channel.name === 'red🔴');
         
     //channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);  //red 458620540555493376
     
-    channel.fetchMessage(client.user.lastMessage).then(async msg => {
+    /*channel.fetchMessage(client.user.lastMessage).then(async msg => {
         await channel.send(`Az aktuális Raid-re jelentkezők száma : *** ${jelentkezok} fő. ***`);
         if (msg) msg.delete().catch(O_o=>{});
-      });
+      });*/
     }
-});	*/
+});	
 
 /*client.on('messageDelete', message => {
   const channel_reports = client.channels.get('519233402055163905'); //reports
