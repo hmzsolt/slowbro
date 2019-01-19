@@ -369,15 +369,36 @@ client.on('guildMemberAdd', member => {
     
     -   Ne felejtsd el elolvasni a ${szabalyzat} -ot !
 `);
+
+    const channel_reports = client.channels.get('519233402055163905'); //reports
+
+    let memberjoin = new Discord.RichEmbed()
+    .setDescription(`Új felhasználó csatlakozott a szerverhez!`)
+    .setColor(0xdd9323)
+    .addField("Új tag: ", member)
+    .addField("Dátum: ", new Date(Date.now()).toLocaleString());
+    
+    channel_reports.send(memberjoin);
 	
 });
+
+client.on('guildMemberRemove', member => {
+
+    const channel_reports = client.channels.get('519233402055163905'); //reports
+
+    let memberleave = new Discord.RichEmbed()
+    .setDescription(`Felhasználó elhagyta a süllyedő hajót!`)
+    .setColor(0xdd9323)
+    .addField("Tag: ", member)
+    .addField("Dátum: ", new Date(Date.now()).toLocaleString());
+    
+    channel_reports.send(memberleave);
+});
+
 
 client.on('message', async message => {
 
 if (!message.content.startsWith(prefix) || message.author.bot) return;    
-
-
-
 if (message.content.startsWith(prefix + "tempmute")){
   if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Nincs hozzá jogosultságod.");
   var args = message.content.split(" ");
