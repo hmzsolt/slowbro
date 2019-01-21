@@ -167,7 +167,7 @@ client.on("messageDelete", async msg => {
   channel_reports.send(embed);
 });
 
-client.on('message', async message => {
+/*client.on('message', async message => {
     const channel_reports = client.channels.get('519233402055163905'); //reports
     
     if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -293,9 +293,9 @@ client.on('message', async message => {
       channel_reports.send(botembed);
 }  
     	
-});
+});*/
 
-client.on('message', async message => {
+/*client.on('message', async message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
   if (message.content.startsWith(prefix + "team") && message.channel.id === '458617725770661898'){
@@ -316,7 +316,7 @@ client.on('message', async message => {
 	  }
   }
 	  
-});	  
+});*/	  
 
 client.on('guildMemberAdd', member => {
 
