@@ -147,7 +147,7 @@ client.on('messageReactionRemove', (reaction, user) => {
   //console.log(message.delete.user.username);	
 });*/
 
-client.on("messageDelete", async msg => {
+/*client.on("messageDelete", async msg => {
   if(msg.author.bot) return;
   //let logs = await msg.guild.fetchAuditLogs({type: 72});
   //let entry = logs.entries.first();
@@ -165,7 +165,7 @@ client.on("messageDelete", async msg => {
 
     const channel_reports = client.channels.get('519233402055163905');
   channel_reports.send(embed);
-});
+});*/
 
 /*client.on('message', async message => {
     const channel_reports = client.channels.get('519233402055163905'); //reports
