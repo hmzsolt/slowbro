@@ -73,7 +73,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
 		
 });*/
 
-client.on('message', (message) => {
+/*client.on('message', (message) => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
    
     if (message.content.startsWith(prefix + "raid")) {
@@ -101,7 +101,7 @@ client.on('message', (message) => {
                 //Something
                });
     }
-  });
+  });*/
 
 client.on('messageReactionAdd', (reaction, user) => {
     const channel_reports = client.channels.get('519233402055163905'); //reports
