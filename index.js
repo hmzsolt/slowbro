@@ -57,7 +57,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
   }
 });
 
-client.on('message', (message) => {
+/*client.on('message', (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
   if (message.content.startsWith(prefix + "red")) {
@@ -71,7 +71,7 @@ client.on('message', (message) => {
     });
   }
 		
-});
+});*/
 
 client.on('message', (message) => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -147,7 +147,7 @@ client.on('messageReactionRemove', (reaction, user) => {
   //console.log(message.delete.user.username);	
 });*/
 
-/*client.on("messageDelete", async msg => {
+client.on("messageDelete", async msg => {
   if(msg.author.bot) return;
   //let logs = await msg.guild.fetchAuditLogs({type: 72});
   //let entry = logs.entries.first();
@@ -165,7 +165,7 @@ client.on('messageReactionRemove', (reaction, user) => {
 
     const channel_reports = client.channels.get('519233402055163905');
   channel_reports.send(embed);
-});*/
+});
 
 client.on('message', async message => {
     const channel_reports = client.channels.get('519233402055163905'); //reports
