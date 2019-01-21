@@ -318,7 +318,7 @@ client.on('message', async message => {
 	  
 });*/	  
 
-client.on('guildMemberAdd', member => {
+/*client.on('guildMemberAdd', member => {
 
     //const welcome = channels.find(channel => channel.name === "welcome");
     //const szabalyzat = channels.find(channel => channel.name === "szabalyzat");
@@ -380,7 +380,7 @@ client.on('guildMemberAdd', member => {
     
     channel_reports.send(memberjoin);
 	
-});
+});*/
 
 client.on('guildMemberRemove', member => {
 
