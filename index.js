@@ -382,7 +382,7 @@ client.on('guildMemberAdd', member => {
 	
 });
 
-client.on('guildMemberRemove', member => {
+/*client.on('guildMemberRemove', member => {
 
     const channel_reports = client.channels.get('519233402055163905'); //reports
 
@@ -393,7 +393,7 @@ client.on('guildMemberRemove', member => {
     .addField(`Dátum: , ${new Date().toLocaleString()}`);
     
     channel_reports.send(memberleave);
-});
+});*/
 
 
 client.on('message', async message => {
