@@ -56,6 +56,12 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
     msg.reply("Kérlek, szöveges formátumban jelentsd a raidet. Pl.: !red GYM neve - reccsenés időpontja - tier").then(m => m.delete(60000));
   }
 
+	if (!msg.content.startsWith('!pvp') && msg.channel.id === '523763306478043137') {
+    if (msg.author.bot) return;
+    msg.delete(1);
+    msg.reply("Csak a **!pvp** parancs használata a megengedett.").then(m => m.delete(60000)).catch(console.error);
+  }
+
 
 });
 
