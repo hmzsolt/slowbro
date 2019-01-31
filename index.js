@@ -57,10 +57,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
   }
 
 
-if (msg.content != '!pvp' && msg.channel.id === '523762932211777556') {
-    msg.delete(1);
-    msg.reply("Csak a **!pvp** parancs használata a megengedett.").then(m => m.delete(60000));
-  }
+
 });
 
 /*client.on('message', (message) => {
