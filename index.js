@@ -55,7 +55,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
     msg.delete(1);
     msg.reply("Kérlek, szöveges formátumban jelentsd a raidet. Pl.: !red GYM neve - reccsenés időpontja - tier").then(m => m.delete(60000));
   }
-});
+
 
 if (msg.content != '!pvp' && msg.channel.id === '523762932211777556') {
     msg.delete(1);
