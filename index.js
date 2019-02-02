@@ -41,7 +41,7 @@ client.on('message', async msg => {
 	"Jogosulatlan előnyszerzés miatt transferelned kell.",
 	"Ugye ezt nem gondoltad komolyan?!",
 	"2 perced van felhúzni lvl 40-ig, vagy transferelned kell!",
-  "Ezt most megtarthatod...",
+  "Ezt most megtarthatod...Jah mégsem!",
   "Ez ugye csak valami rossz vicc akart lenni?",
 	"Jó kis poké, nagyon szeretem!",
 	"Csűrtél rá egy grétikét? "
