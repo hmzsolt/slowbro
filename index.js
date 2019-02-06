@@ -113,7 +113,7 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
 
 client.on('messageReactionAdd', (reaction, user) => {
     const channel_reports = client.channels.get('519233402055163905'); //reports
-	if (client.channel.parentID != ('540968889136316417')) return; 
+	 
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	var  jelentkezok = reaction.count-1;
  
@@ -133,7 +133,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 
 client.on('messageReactionRemove', (reaction, user) => {
     const channel_reports = client.channels.get('519233402055163905'); //reports
-	if (client.channel.parentID != ('540968889136316417')) return;
+	
     if(reaction.emoji.name === jelentkezem && user.username != 'Slowbro' ) {
 	var  jelentkezok = reaction.count-1;
     
