@@ -62,6 +62,12 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
     msg.reply("Csak a **!pvp** parancs használata a megengedett.").then(m => m.delete(60000)).catch(console.error);
   }
 
+if (!msg.content.startsWith('!red') || !msg.content.startsWith('!raid') && msg.channel.id === '458620540555493376') {
+    if (msg.author.bot) return;
+    msg.delete(1);
+    msg.reply("Raid jelentés formája : !red <gym neve> <reccsenés időpontja> <tier vagy boss>").then(m => m.delete(60000)).catch(console.error);
+}	
+	
 
 });
 
