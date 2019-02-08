@@ -33,7 +33,7 @@ client.on('ready', () => {
 });
 
 client.on('message', async msg => {
-  var helloResponses = [
+/*  var helloResponses = [
 	"Sokallom.",
 	"Tagság megvonás 1 hétig!", 
 	"Többet ne forduljon elő!",
@@ -49,7 +49,7 @@ client.on('message', async msg => {
 var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
   if (msg.attachments.size > 0 && msg.channel.id === '504535266069970945') {
     msg.reply(response).then().catch(console.error);
-  }  
+  }  */
 	  
   if (msg.attachments.size > 0 && msg.channel.id === '458620540555493376') {
     msg.delete(1);
