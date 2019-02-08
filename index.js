@@ -32,8 +32,8 @@ client.on('ready', () => {
    
 });
 
-client.on('message', async msg => {
-/*  var helloResponses = [
+/* client.on('message', async msg => {
+  var helloResponses = [
 	"Sokallom.",
 	"Tagság megvonás 1 hétig!", 
 	"Többet ne forduljon elő!",
@@ -54,18 +54,18 @@ var response = helloResponses[Math.floor(Math.random()*helloResponses.length)];
   if (msg.attachments.size > 0 && msg.channel.id === '458620540555493376') {
     msg.delete(1);
     msg.reply("Kérlek, szöveges formátumban jelentsd a raidet. Pl.: !red GYM neve - reccsenés időpontja - tier").then(m => m.delete(60000));
-  }   */
+  }   
 
 	if (!msg.content.startsWith('!pvp') && msg.channel.id === '523763306478043137') {
     if (msg.author.bot) return;
     msg.delete(1);
     msg.reply("Csak a **!pvp** parancs használata a megengedett.").then(m => m.delete(60000)).catch(console.error);
-  }
+  } 
 
 
 	
 
-});
+}); */
 
 /*client.on('message', (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
